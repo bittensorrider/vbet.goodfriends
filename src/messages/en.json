@@ -1,0 +1,394 @@
+{
+    "aside_menu": {
+        "liveCasino": "Live Casino",
+        "slot": "Slot",
+        "promotions": "Promotions",
+        "transaction": "Transaction",
+        "betHistory": "Bet History",
+        "notices": "Notices",
+        "helpCenter": "Help Center",
+        "settings": "Settings",
+        "general": "General",
+        "balance": "Balance",
+        "deposit": "Deposit",
+        "withdraw": "Withdraw",
+        "transactions": "Transactions",
+        "betHistoryWallet": "Bet History",
+        "termsOfService": "Terms of Service",
+        "support": "Support",
+        "faq": "FAQ",
+        "games": "Games",
+        "activity": "Activity",
+        "others": "Others"
+    },
+    "auth_login": {
+        "email": "Email",
+        "password": "Password",
+        "forgotPassword": "Forgot Password?",
+        "signIn": "Sign In"
+    },
+    "auth_register": {
+        "email": "Email",
+        "emailCode": "Email Code",
+        "sendCode": "Send Code",
+        "password": "Password",
+        "nickname": "Nickname",
+        "submit": "Submit"
+    },
+    "auth_reset": {
+        "email": "Email",
+        "emailCode": "Email Code",
+        "sendCode": "Send Code",
+        "sending": "Sending...",
+        "confirm": "Confirm",
+        "password": "Password",
+        "newPassword": "New Password",
+        "confirmPassword": "Confirm Password",
+        "backToLogin": "Back To Login",
+        "verify": "Verify"
+    },
+    "auth_verify": {
+        "verificationCode": "Verification Code",
+        "goBack": "Go back",
+        "verify": "Verify"
+    },
+    "theme_switcher": {
+        "dark": "Dark",
+        "light": "Light"
+    },
+    "header_guest": {
+        "login": "Login",
+        "register": "Register"
+    },
+    "auth_modal": {
+        "title_login": "Welcome To GoodFriends",
+        "title_register": "Welcome To GoodFriends",
+        "title_reset": "Reset Password",
+        "title_verify": "Please Verify Email",
+        "desc_login": "Professional casino site for players",
+        "desc_register": "Create account and start Gambling with Good Friends",
+        "desc_reset": "Reset Password",
+        "desc_verify": "We Send 6 digit code on your email <br /> <span class=\"font-bold text-foreground\">{email}</span>",
+        "or_continue_with": "or continue with"
+    },
+    "tab_filter": {
+        "all": "All",
+        "ended": "Ended",
+        "login": "Login",
+        "register": "Register",
+        "live": "Live Casino",
+        "slot": "Slot",
+        "casino": "Casino",
+        "security": "Security",
+        "offers": "Offers",
+        "general": "General",
+        "balance": "Balance",
+        "transactions": "Transactions",
+        "betHistory": "Bet History",
+        "deposit": "Deposit",
+        "withdraw": "Withdraw",
+        "faq": "FAQ",
+        "support": "Support",
+        "termsOfService": "Terms of Service",
+        "profile": "Profile",
+        "vip": "VIP"
+    },
+    "auth_errors": {
+        "email_required": "Email is required",
+        "email_invalid": "Invalid email address",
+        "password_required": "Password is required",
+        "password_min": "Password must be at least 6 characters",
+        "nickname_required": "Nickname is required",
+        "code_required": "Code is required",
+        "code_invalid": "Invalid code",
+        "newPassword_required": "New password is required",
+        "confirmPassword_match": "Passwords do not match"
+    },
+    "casino_list": {
+      "title": "Casino",
+      "pragmatic_title": "Pragmatic Play Live",
+      "pragmatic_title_ch": "프라그마틱 라이브"
+    },
+    "slot_list": {
+      "title": "Slots",
+      "pragmatic_title": "Pragmatic",
+      "pragmatic_title_ch": "프라그마틱",
+      "habanero_title": "Habanero",
+      "habanero_title_ch": "하바네로",
+      "playson_title": "Playson",
+      "playson_title_ch": "플레이슨",
+      "pgsoft_title": "PGSoft",
+      "pgsoft_title_ch": "PGSoft",
+      "cq9_title": "CQ9",
+      "cq9_title_ch": "CQ9"
+    },
+    "recent_bets_table": {
+      "section_title": "Recent Bets",
+      "game": "Game",
+      "user": "User",
+      "time": "Time",
+      "bet_amount": "Bet Amount",
+      "multiplier": "Multiplier",
+      "payout": "Payout"
+    },
+    "games_page": {
+      "page_title_casino": "Casino",
+      "page_title_slot": "Slot",
+      "filter_all": "All",
+      "no_results": "No Results Found",
+      "no_results_found_in": "No Results Found in {type}"
+    },
+    "promotions_page": {
+      "page_title": "Promotions",
+      "banner_subtitle": "Great Bonus For Every Deposit",
+      "banner_title": "UP TO 360%",
+      "deposit_now": "Deposit Now",
+      "tab_all": "All",
+      "tab_ended": "Ended",
+      "ends": "Ends {date}",
+      "in_progress": "In Progress",
+      "ended": "Ended"
+    },
+    "transactions_page": {
+      "page_title": "Transactions",
+      "table_headers": {
+        "type": "Type",
+        "date": "Date",
+        "status": "Status",
+        "view": "View",
+        "amount": "Amount"
+      },
+      "transaction_types": {
+        "deposit": "Deposit",
+        "withdraw": "Withdraw"
+      },
+      "status": {
+        "confirmed": "Confirmed"
+      },
+      "view_link": "Transaction",
+      "filters": {
+        "search_placeholder": "Search by Transaction ID",
+        "select_type_placeholder": "Select Type",
+        "select_max_placeholder": "Select max",
+        "all": "All",
+        "withdraw": "Withdraw",
+        "deposit": "Deposit",
+        "max_10": "Max: 10",
+        "max_25": "Max: 25",
+        "max_50": "Max: 50",
+        "max_100": "Max: 100",
+        "start_date": "Start Date",
+        "end_date": "End Date",
+        "date_placeholder": "MM-DD-YYYY",
+        "reset_filter": "Reset Filter"
+      }
+    },
+    "bet_history_page": {
+      "page_title": "Bet History",
+      "table_headers": {
+        "game": "Game",
+        "order_id": "Order ID",
+        "date": "Date",
+        "type": "Type",
+        "bet": "Bet",
+        "win": "Win"
+      },
+      "filters": {
+        "search_placeholder": "Search by game name",
+        "select_type_placeholder": "Select Type",
+        "select_max_placeholder": "Select max",
+        "all": "All",
+        "live": "Live",
+        "slot": "Slot",
+        "max_10": "Max: 10",
+        "max_25": "Max: 25",
+        "max_50": "Max: 50",
+        "max_100": "Max: 100",
+        "start_date": "Start Date",
+        "end_date": "End Date",
+        "date_placeholder": "MM-DD-YYYY",
+        "reset_filter": "Reset Filter"
+      }
+    },
+    "notices_page": {
+      "page_title": "Notices",
+      "no_results": "No Results Found in {filter}",
+      "filters": {
+        "all": "All",
+        "active": "Active",
+        "inactive": "Inactive"
+      }
+    },
+    "account_information_form": {
+      "email_label": "Email",
+      "email_placeholder": "********",
+      "change_button": "Change"
+    },
+    "update_password_form": {
+      "email_label": "Email",
+      "email_placeholder": "example@gmail.com",
+      "email_code_label": "Email Code",
+      "email_code_placeholder": "Email Code",
+      "new_password_label": "New Password",
+      "new_password_placeholder": "********",
+      "confirm_password_label": "Confirm New Password",
+      "confirm_password_placeholder": "********",
+      "send_code_button": "Send Code",
+      "update_button": "Update",
+      "email_already_registered": "This email address has already been registered.",
+      "authentication_code_mismatch": "The authentication code do not match."
+    },
+    "update_password_modal": {
+      "title": "Update Password",
+      "aria_label": "Update password"
+    },
+    "wallet_modal": {
+      "manage_wallet_title": "Manage Your Wallet",
+      "current_rolling_title": "Current Rolling",
+      "currency_label": "Currency:",
+      "deposit_money": "Deposit Money:",
+      "creation_date": "Creation Date:",
+      "withdrawable": "Withdrawable:",
+      "set_rolling": "Set Rolling: 500%",
+      "sports_betting": "Sports Betting",
+      "casino_betting": "Casino Betting",
+      "slot_betting": "Slot Betting",
+      "holdem_betting": "Hold'em Betting",
+      "minigame_betting": "Minigame Betting"
+    },
+    "wheel_modal": {
+      "lucky_wheel_title": "Lucky Wheel",
+      "wheel_details_title": "Wheel Details",
+      "details_button": "Details"
+    },
+    "attendance_modal": {
+      "title": "Attendance",
+      "three_days": "3 Days",
+      "seven_days": "7 Days",
+      "thirty_days": "30 Days",
+      "bonus_amount": "30,000 Bonus",
+      "reset_message": "It will be reset when the month passes",
+      "my_attendance": "My Attendance",
+      "total_attendance": "Total Attendance",
+      "zero_days": "0 Days",
+      "zero_bonus": "0 Bonus"
+    },
+    "unlock_modal": {
+      "title": "Unlock Bonus",
+      "currency_label": "Currency:",
+      "unlocked_bonus": "Unlocked Bonus:",
+      "bonus_amount": "1.25 Bonus",
+      "min_placeholder": "Min 10.000",
+      "claim_bonus": "Claim Bonus",
+      "locked_bonus": "Locked Bonus",
+      "locked_bonus_amount": "1.25 Bonus",
+      "unlock_formula": "Unlocked bonus = Bet amount * 1% * 0.02%",
+      "converting_note": "Converting a bouns creates new rolling conditions.",
+      "go_to_casino": "Go To Casino",
+      "go_to_sports": "Go To Sports"
+    },
+    "profile_modal": {
+      "manage_profile_title": "Manage Your Profile",
+      "edit_image_title": "Edit Your Image",
+      "welcome_title": "Welcome to GoodFriends"
+    },
+    "vip_tab": {
+      "vip_benefits": "VIP Benefits",
+      "bronze": "Bronze",
+      "silver": "Silver",
+      "gold": "Gold",
+      "platinum_1_3": "Platinum I-III",
+      "platinum_4_6": "Platinum IV-VI",
+      "level": "Level",
+      "bonus_from_support": "Bonus from Support in currency of your choice",
+      "rakeback_enabled": "Rakeback enabled",
+      "weekly_bonuses": "Weekly bonuses",
+      "monthly_bonuses": "Monthly bonuses",
+      "vip_telegram_access": "VIP Telegram channel access",
+      "vip_hosts": "VIP Hosts",
+      "vip_hosts_desc": "Reach Platinum IV or above and receive your own dedicated VIP host who will support and cater to your betting needs.",
+      "tailored_bonuses": "Tailored bonuses and sports betting limits",
+      "gameplay_statistics": "Insight into gameplay statistics",
+      "exclusive_promotions": "Exclusive promotions and events"
+    },
+    "search_modal": {
+      "search_games": "Search Games",
+      "search_placeholder": "Search games...",
+      "search_min_chars": "Search requires at least 3 characters.",
+      "no_games_found": "No games found",
+      "loading_more": "Loading More..."
+    },
+    "notices_modal": {
+      "notice_title": "Notice"
+    },
+    "promotion_modal": {
+      "promotion_title": "Promotion"
+    },
+    "info_card": {
+      "amount_held": "Amount Held",
+      "total_spin_bonus": "Total Spin Bonus",
+      "spins_remaining": "Number of spins remaining",
+      "point_label": "Point:",
+      "progress": "Progress",
+      "progress_desc": "Earn bonuses and spin rewards as you level up. Plus, the higher your level, the more bonus rewards you can get!",
+      "bonus": "Bonus",
+      "locked": "Locked",
+      "unlocked": "Unlocked",
+      "bonus_amount": "Bonus",
+      "referrer": "Referrer",
+      "referrer_desc": "Register your referral and receive a bonus",
+      "register_referrer": "Register a referrer",
+      "level_up_event": "Level Up Event",
+      "next_level_reward": "Next Level Up Reward",
+      "go_to_casino": "Go To Casino",
+      "balance": "Balance",
+      "search_by_currency": "Search by currency",
+      "withdraw": "Withdraw",
+      "deposit": "Deposit",
+      "spin_now": "Spin Now"
+    },
+    "wallet_forms": {
+      "currency": "Currency",
+      "select_currency": "Select Currency",
+      "network": "Network",
+      "select_network": "Select Network",
+      "address": "Address",
+      "amount": "Amount",
+      "amount_placeholder": "0.000000",
+      "withdrawal": "Withdrawal",
+      "deposit_now": "Deposit Now",
+      "max": "Max",
+      "minimum_withdrawal": "Minimum Withdrawal:",
+      "transaction_fee": "Transaction Fee:",
+      "minimum_deposit": "Minimum Deposit:",
+      "credited": "Credited:",
+      "confirmation": "Confirmation",
+      "copy_address": "Copy Address",
+      "address_copied": "Address Copied"
+    },
+    "banners": {
+      "recent_bet_wins": "Recent Bet Wins",
+      "live_user_stats": "Live User Statistics",
+      "player": "Player",
+      "win": "Win"
+    },
+    "profile_menu": {
+      "wallet": "Wallet",
+      "profile": "Profile",
+      "transaction": "Transaction",
+      "bet_history": "Bet History",
+      "settings": "Settings",
+      "logout": "Logout"
+    },
+    "profile_form": {
+      "name": "Name",
+      "update": "Update",
+      "name_placeholder": "Enter your name"
+    },
+    "game_details": {
+      "login_to_continue": "Login to continue"
+    },
+    "common": {
+      "home": "Home"
+    }
+}

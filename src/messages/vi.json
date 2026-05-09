@@ -1,0 +1,394 @@
+{
+    "aside_menu": {
+        "liveCasino": "Sòng bạc trực tiếp",
+        "slot": "Máy đánh bạc",
+        "promotions": "Khuyến mãi",
+        "transaction": "Giao dịch",
+        "betHistory": "Lịch sử cược",
+        "notices": "Thông báo",
+        "helpCenter": "Trung tâm trợ giúp",
+        "settings": "Cài đặt",
+        "general": "Chung",
+        "balance": "Số dư",
+        "deposit": "Nạp tiền",
+        "withdraw": "Rút tiền",
+        "transactions": "Giao dịch",
+        "betHistoryWallet": "Lịch sử cược",
+        "termsOfService": "Điều khoản dịch vụ",
+        "support": "Hỗ trợ",
+        "faq": "Câu hỏi thường gặp",
+        "games": "Trò chơi",
+        "activity": "Hoạt động",
+        "others": "Khác"
+    },
+    "auth_login": {
+        "email": "Email",
+        "password": "Mật khẩu",
+        "forgotPassword": "Quên mật khẩu?",
+        "signIn": "Đăng nhập"
+    },
+    "auth_register": {
+        "email": "Email",
+        "emailCode": "Mã email",
+        "sendCode": "Gửi mã",
+        "password": "Mật khẩu",
+        "nickname": "Biệt danh",
+        "submit": "Đăng ký"
+    },
+    "auth_reset": {
+        "email": "Email",
+        "emailCode": "Mã email",
+        "sendCode": "Gửi mã",
+        "sending": "Đang gửi...",
+        "confirm": "Xác nhận",
+        "password": "Mật khẩu",
+        "newPassword": "Mật khẩu mới",
+        "confirmPassword": "Xác nhận mật khẩu",
+        "backToLogin": "Quay lại đăng nhập",
+        "verify": "Xác minh"
+    },
+    "auth_verify": {
+        "verificationCode": "Mã xác minh",
+        "goBack": "Quay lại",
+        "verify": "Xác minh"
+    },
+    "theme_switcher": {
+        "dark": "Tối",
+        "light": "Sáng"
+    },
+    "header_guest": {
+        "login": "Đăng nhập",
+        "register": "Đăng ký"
+    },
+    "auth_modal": {
+        "title_login": "Chào mừng đến với GoodFriends",
+        "title_register": "Chào mừng đến với GoodFriends",
+        "title_reset": "Đặt lại mật khẩu",
+        "title_verify": "Vui lòng xác minh email",
+        "desc_login": "Trang casino chuyên nghiệp cho người chơi",
+        "desc_register": "Tạo tài khoản và bắt đầu chơi cùng Good Friends",
+        "desc_reset": "Đặt lại mật khẩu",
+        "desc_verify": "Chúng tôi đã gửi mã 6 chữ số đến email của bạn <br /> <span class=\"font-bold text-foreground\">{email}</span>",
+        "or_continue_with": "hoặc tiếp tục với"
+    },
+    "tab_filter": {
+        "all": "Tất cả",
+        "ended": "Đã kết thúc",
+        "login": "Đăng nhập",
+        "register": "Đăng ký",
+        "live": "Casino trực tiếp",
+        "slot": "Slot",
+        "casino": "Casino",
+        "security": "Bảo mật",
+        "offers": "Ưu đãi",
+        "general": "Chung",
+        "balance": "Số dư",
+        "transactions": "Giao dịch",
+        "betHistory": "Lịch sử cược",
+        "deposit": "Nạp tiền",
+        "withdraw": "Rút tiền",
+        "faq": "FAQ",
+        "support": "Hỗ trợ",
+        "termsOfService": "Điều khoản dịch vụ",
+        "profile": "Hồ sơ",
+        "vip": "VIP"
+    },
+    "auth_errors": {
+        "email_required": "Vui lòng nhập email",
+        "email_invalid": "Email không hợp lệ",
+        "password_required": "Vui lòng nhập mật khẩu",
+        "password_min": "Mật khẩu phải có ít nhất 6 ký tự",
+        "nickname_required": "Vui lòng nhập biệt danh",
+        "code_required": "Vui lòng nhập mã",
+        "code_invalid": "Mã không hợp lệ",
+        "newPassword_required": "Vui lòng nhập mật khẩu mới",
+        "confirmPassword_match": "Mật khẩu xác nhận không khớp"
+    },
+    "casino_list": {
+      "title": "Sòng bạc",
+      "pragmatic_title": "Pragmatic Play Live",
+      "pragmatic_title_ch": "프라그마틱 라이브"
+    },
+    "slot_list": {
+      "title": "Máy đánh bạc",
+      "pragmatic_title": "Pragmatic",
+      "pragmatic_title_ch": "프라그마틱",
+      "habanero_title": "Habanero",
+      "habanero_title_ch": "하바네로",
+      "playson_title": "Playson",
+      "playson_title_ch": "플레이슨",
+      "pgsoft_title": "PGSoft",
+      "pgsoft_title_ch": "PGSoft",
+      "cq9_title": "CQ9",
+      "cq9_title_ch": "CQ9"
+    },
+    "recent_bets_table": {
+      "section_title": "Cược gần đây",
+      "game": "Trò chơi",
+      "user": "Người dùng",
+      "time": "Thời gian",
+      "bet_amount": "Số tiền cược",
+      "multiplier": "Hệ số",
+      "payout": "Tiền trả"
+    },
+    "games_page": {
+      "page_title_casino": "Sòng bạc",
+      "page_title_slot": "Máy đánh bạc",
+      "filter_all": "Tất cả",
+      "no_results": "Không tìm thấy kết quả",
+      "no_results_found_in": "Không tìm thấy kết quả trong {type}"
+    },
+    "promotions_page": {
+      "page_title": "Khuyến mãi",
+      "banner_subtitle": "Thưởng lớn cho mỗi lần nạp tiền",
+      "banner_title": "LÊN ĐẾN 360%",
+      "deposit_now": "Nạp ngay",
+      "tab_all": "Tất cả",
+      "tab_ended": "Đã kết thúc",
+      "ends": "Kết thúc {date}",
+      "in_progress": "Đang diễn ra",
+      "ended": "Đã kết thúc"
+    },
+    "transactions_page": {
+      "page_title": "Giao dịch",
+      "table_headers": {
+        "type": "Loại",
+        "date": "Ngày",
+        "status": "Trạng thái",
+        "view": "Xem",
+        "amount": "Số tiền"
+      },
+      "transaction_types": {
+        "deposit": "Nạp tiền",
+        "withdraw": "Rút tiền"
+      },
+      "status": {
+        "confirmed": "Đã xác nhận"
+      },
+      "view_link": "Giao dịch",
+      "filters": {
+        "search_placeholder": "Tìm kiếm theo ID giao dịch",
+        "select_type_placeholder": "Chọn loại",
+        "select_max_placeholder": "Chọn tối đa",
+        "all": "Tất cả",
+        "withdraw": "Rút tiền",
+        "deposit": "Nạp tiền",
+        "max_10": "Tối đa: 10",
+        "max_25": "Tối đa: 25",
+        "max_50": "Tối đa: 50",
+        "max_100": "Tối đa: 100",
+        "start_date": "Ngày bắt đầu",
+        "end_date": "Ngày kết thúc",
+        "date_placeholder": "MM-DD-YYYY",
+        "reset_filter": "Đặt lại bộ lọc"
+      }
+    },
+    "bet_history_page": {
+      "page_title": "Lịch sử cược",
+      "table_headers": {
+        "game": "Trò chơi",
+        "order_id": "ID đơn hàng",
+        "date": "Ngày",
+        "type": "Loại",
+        "bet": "Cược",
+        "win": "Thắng"
+      },
+      "filters": {
+        "search_placeholder": "Tìm kiếm theo tên trò chơi",
+        "select_type_placeholder": "Chọn loại",
+        "select_max_placeholder": "Chọn tối đa",
+        "all": "Tất cả",
+        "live": "Trực tiếp",
+        "slot": "Máy đánh bạc",
+        "max_10": "Tối đa: 10",
+        "max_25": "Tối đa: 25",
+        "max_50": "Tối đa: 50",
+        "max_100": "Tối đa: 100",
+        "start_date": "Ngày bắt đầu",
+        "end_date": "Ngày kết thúc",
+        "date_placeholder": "MM-DD-YYYY",
+        "reset_filter": "Đặt lại bộ lọc"
+      }
+    },
+    "notices_page": {
+      "page_title": "Thông báo",
+      "no_results": "Không có kết quả nào trong {filter}",
+      "filters": {
+        "all": "Tất cả",
+        "active": "Hoạt động",
+        "inactive": "Không hoạt động"
+      }
+    },
+    "account_information_form": {
+      "email_label": "Email",
+      "email_placeholder": "********",
+      "change_button": "Thay đổi"
+    },
+    "update_password_form": {
+      "email_label": "Email",
+      "email_placeholder": "example@gmail.com",
+      "email_code_label": "Mã xác thực email",
+      "email_code_placeholder": "Nhập mã xác thực email",
+      "new_password_label": "Mật khẩu mới",
+      "new_password_placeholder": "********",
+      "confirm_password_label": "Xác nhận mật khẩu mới",
+      "confirm_password_placeholder": "********",
+      "send_code_button": "Gửi mã",
+      "update_button": "Cập nhật",
+      "email_already_registered": "Email này đã được đăng ký.",
+      "authentication_code_mismatch": "Mã xác thực không đúng."
+    },
+    "update_password_modal": {
+      "title": "Cập nhật mật khẩu",
+      "aria_label": "Cập nhật mật khẩu"
+    },
+    "wallet_modal": {
+      "manage_wallet_title": "Quản lý ví của bạn",
+      "current_rolling_title": "Rolling hiện tại",
+      "currency_label": "Tiền tệ:",
+      "deposit_money": "Tiền nạp:",
+      "creation_date": "Ngày tạo:",
+      "withdrawable": "Có thể rút:",
+      "set_rolling": "Đặt Rolling: 500%",
+      "sports_betting": "Cược thể thao",
+      "casino_betting": "Cược casino",
+      "slot_betting": "Cược slot",
+      "holdem_betting": "Cược Hold'em",
+      "minigame_betting": "Cược minigame"
+    },
+    "wheel_modal": {
+      "lucky_wheel_title": "Vòng quay may mắn",
+      "wheel_details_title": "Chi tiết vòng quay",
+      "details_button": "Chi tiết"
+    },
+    "attendance_modal": {
+      "title": "Điểm danh hàng ngày",
+      "three_days": "3 Ngày",
+      "seven_days": "7 Ngày",
+      "thirty_days": "30 Ngày",
+      "bonus_amount": "Thưởng 30,000",
+      "reset_message": "Sẽ được đặt lại vào đầu tháng mới",
+      "my_attendance": "Điểm danh của tôi",
+      "total_attendance": "Tổng điểm danh",
+      "zero_days": "0 Ngày",
+      "zero_bonus": "0 Thưởng"
+    },
+    "unlock_modal": {
+      "title": "Mở khóa thưởng",
+      "currency_label": "Tiền tệ:",
+      "unlocked_bonus": "Thưởng đã mở khóa:",
+      "bonus_amount": "1.25 Thưởng",
+      "min_placeholder": "Tối thiểu 10.000",
+      "claim_bonus": "Nhận thưởng",
+      "locked_bonus": "Thưởng bị khóa",
+      "locked_bonus_amount": "1.25 Thưởng",
+      "unlock_formula": "Thưởng đã mở khóa = Số tiền cược * 1% * 0.02%",
+      "converting_note": "Chuyển đổi thưởng sẽ tạo điều kiện rolling mới.",
+      "go_to_casino": "Đến Casino",
+      "go_to_sports": "Đến Thể thao"
+    },
+    "profile_modal": {
+      "manage_profile_title": "Quản lý hồ sơ của bạn",
+      "edit_image_title": "Chỉnh sửa hình ảnh",
+      "welcome_title": "Chào mừng đến với GoodFriends"
+    },
+    "vip_tab": {
+      "vip_benefits": "Lợi ích VIP",
+      "bronze": "Đồng",
+      "silver": "Bạc",
+      "gold": "Vàng",
+      "platinum_1_3": "Bạch kim I-III",
+      "platinum_4_6": "Bạch kim IV-VI",
+      "level": "Cấp độ",
+      "bonus_from_support": "Thưởng từ Hỗ trợ bằng tiền tệ bạn chọn",
+      "rakeback_enabled": "Rakeback được bật",
+      "weekly_bonuses": "Thưởng hàng tuần",
+      "monthly_bonuses": "Thưởng hàng tháng",
+      "vip_telegram_access": "Truy cập kênh Telegram VIP",
+      "vip_hosts": "Người chủ trì VIP",
+      "vip_hosts_desc": "Đạt cấp độ Bạch kim IV trở lên và nhận người chủ trì VIP riêng sẽ hỗ trợ và phục vụ nhu cầu cược của bạn.",
+      "tailored_bonuses": "Thưởng tùy chỉnh và giới hạn cược thể thao",
+      "gameplay_statistics": "Thông tin chi tiết về thống kê gameplay",
+      "exclusive_promotions": "Khuyến mãi và sự kiện độc quyền"
+    },
+    "search_modal": {
+      "search_games": "Tìm kiếm trò chơi",
+      "search_placeholder": "Tìm kiếm trò chơi...",
+      "search_min_chars": "Tìm kiếm yêu cầu ít nhất 3 ký tự.",
+      "no_games_found": "Không tìm thấy trò chơi",
+      "loading_more": "Đang tải thêm..."
+    },
+    "notices_modal": {
+      "notice_title": "Thông báo"
+    },
+    "promotion_modal": {
+      "promotion_title": "Khuyến mãi"
+    },
+    "info_card": {
+      "amount_held": "Số tiền nắm giữ",
+      "total_spin_bonus": "Tổng thưởng quay",
+      "spins_remaining": "Số lần quay còn lại",
+      "point_label": "Điểm:",
+      "progress": "Tiến độ",
+      "progress_desc": "Kiếm thưởng và phần thưởng quay khi bạn lên cấp. Cộng thêm, cấp độ càng cao, bạn càng nhận được nhiều phần thưởng thưởng!",
+      "bonus": "Thưởng",
+      "locked": "Bị khóa",
+      "unlocked": "Đã mở khóa",
+      "bonus_amount": "Thưởng",
+      "referrer": "Người giới thiệu",
+      "referrer_desc": "Đăng ký người giới thiệu và nhận thưởng",
+      "register_referrer": "Đăng ký người giới thiệu",
+      "level_up_event": "Sự kiện lên cấp",
+      "next_level_reward": "Phần thưởng lên cấp tiếp theo",
+      "go_to_casino": "Đến Casino",
+      "balance": "Số dư",
+      "search_by_currency": "Tìm kiếm theo tiền tệ",
+      "withdraw": "Rút tiền",
+      "deposit": "Nạp tiền",
+      "spin_now": "Quay ngay"
+    },
+    "wallet_forms": {
+      "currency": "Tiền tệ",
+      "select_currency": "Chọn tiền tệ",
+      "network": "Mạng",
+      "select_network": "Chọn mạng",
+      "address": "Địa chỉ",
+      "amount": "Số tiền",
+      "amount_placeholder": "0.000000",
+      "withdrawal": "Rút tiền",
+      "deposit_now": "Nạp tiền ngay",
+      "max": "Tối đa",
+      "minimum_withdrawal": "Rút tiền tối thiểu:",
+      "transaction_fee": "Phí giao dịch:",
+      "minimum_deposit": "Nạp tiền tối thiểu:",
+      "credited": "Đã ghi nhận:",
+      "confirmation": "Xác nhận",
+      "copy_address": "Sao chép địa chỉ",
+      "address_copied": "Đã sao chép địa chỉ"
+    },
+    "banners": {
+      "recent_bet_wins": "Thắng cược gần đây",
+      "live_user_stats": "Thống kê người dùng trực tiếp",
+      "player": "Người chơi",
+      "win": "Thắng"
+    },
+    "profile_menu": {
+      "wallet": "Ví",
+      "profile": "Hồ sơ",
+      "transaction": "Giao dịch",
+      "bet_history": "Lịch sử cược",
+      "settings": "Cài đặt",
+      "logout": "Đăng xuất"
+    },
+    "profile_form": {
+      "name": "Tên",
+      "update": "Cập nhật",
+      "name_placeholder": "Nhập tên của bạn"
+    },
+    "game_details": {
+      "login_to_continue": "Đăng nhập để tiếp tục"
+    },
+    "common": {
+      "home": "Trang chủ"
+    }
+}
