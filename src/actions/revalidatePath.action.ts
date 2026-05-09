@@ -1,15 +1,20 @@
 "use server";
 
-import { revalidateTag } from "next/cache";
+import { revalidatePath } from "next/cache";
 
-export async function revalidateTagAction(tag: string) {
-  revalidateTag(tag);
+export async function revalidatePathAction(
+  path: string,
+  type?: "page" | "layout",
+) {
+  revalidatePath(path, type);
 }
 
-export async function revalidateTagsAction(tags: string[]) {
-    if (!Array.isArray(tags)) return;
-  
-    for (const tag of tags) {
-      revalidateTag(tag);
-    }
+export async function revalidatePathsAction(
+  paths: { path: string; type?: "page" | "layout" }[],
+) {
+  if (!Array.isArray(paths)) return;
+
+  for (const { path, type } of paths) {
+    revalidatePath(path, type);
   }
+}

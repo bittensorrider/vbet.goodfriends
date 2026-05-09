@@ -16,7 +16,7 @@ import { useModal } from "@/hooks/useModal";
 import { toastSuccess } from "@/components/ui/sonner";
 import { userSelectors } from "@/store/user.store";
 import { User } from "@/types/user.types";
-import { revalidateTagAction } from "@/actions/revalidatePath.action";
+import { revalidatePathAction } from "@/actions/revalidatePath.action";
 import { LoginAction, LoginSuccessAction } from "@/actions/auth.actions";
 import { useTranslations } from "next-intl";
 
@@ -27,7 +27,7 @@ type Props = {
 export default function LoginForm({ setActiveTab }: Props) {
   const loginModal = useModal("auth");
   const setUser = userSelectors.use.setUser();
-  const t = useTranslations('auth_login');
+  const t = useTranslations("auth_login");
   const form = useForm<LoginSchema>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -37,7 +37,7 @@ export default function LoginForm({ setActiveTab }: Props) {
   });
 
   async function onSubmit(values: LoginSchema) {
-    const res: any = await LoginAction(values)
+    const res: any = await LoginAction(values);
 
     if (!res.success) {
       form.setError("email", { message: res.message });
@@ -51,11 +51,10 @@ export default function LoginForm({ setActiveTab }: Props) {
     toastSuccess(res.message);
     setUser(res_success.data as User);
 
-    revalidateTagAction("user")
-    revalidateTagAction("game-launch")
+    revalidatePathAction("user");
+    revalidatePathAction("game-launch");
 
     loginModal.onClose();
-
   }
 
   return (
@@ -92,11 +91,7 @@ export default function LoginForm({ setActiveTab }: Props) {
                   </button>
                 </div>
                 <FormControl>
-                  <Input
-                    type="password"
-                    placeholder="******"
-                    {...field}
-                  />
+                  <Input type="password" placeholder="******" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { User } from "@/types/user.types";
 import { userSelectors } from "@/store/user.store";
 import { GetSessionType } from "@/lib/getSession";
-import { revalidateTagAction } from "@/actions/revalidatePath.action";
+import { revalidatePathAction } from "@/actions/revalidatePath.action";
 import { LoginSuccessAction, RefreshAction } from "@/actions/auth.actions";
 import { initOnlineSocket } from "@/lib/socket/online";
 import { v4 as uuidv4 } from "uuid";
@@ -30,7 +30,7 @@ export default function HydrateUser({ session }: { session: GetSessionType }) {
           } else {
             const user = res_success.data as User;
             setUser(user);
-            revalidateTagAction("game-launch");
+            revalidatePathAction("game-launch");
           }
         } catch (err) {
           console.error("Refresh error", err);
@@ -95,7 +95,7 @@ export default function HydrateUser({ session }: { session: GetSessionType }) {
 
       prevUserIdRef.current = null;
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?._id, session.user, session.needRefresh]);
   return null;
 }
