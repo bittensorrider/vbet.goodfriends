@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import BannerWrapper from "@/components/banners/BannerWrapper";
 import PromotionCard from "@/components/cards/promotion/PromotionCard";
 import PageTitle from "@/components/common/page/pageTitle";
@@ -33,8 +35,13 @@ type Props = {
   }>;
 };
 
+export const metadata: Metadata = {
+  title: "Promotions | GoodFriends",
+  description: "Exclusive promotions and offers",
+};
+
 export default async function Page({ searchParams }: Props) {
-  const t = await getTranslations('promotions_page');
+  const t = await getTranslations("promotions_page");
   const queryFilters = await searchParams;
   const currentQueryFilters = new URLSearchParams(queryFilters);
   const filter = queryFilters.filter || "all";
@@ -47,28 +54,28 @@ export default async function Page({ searchParams }: Props) {
   return (
     <>
       <div className="space-y-4">
-        <PageTitle>{t('page_title')}</PageTitle>
+        <PageTitle>{t("page_title")}</PageTitle>
 
         <BannerWrapper className="h-[179px] md:px-9 px-4 md:h-[280px] pr-4 text-white from-primary/80">
           <div className="flex flex-col gap-1 md:gap-3 min-w-max">
             <p className="text-sm md:text-lg font-medium max-w-[203px]">
-              {t('banner_subtitle')}
+              {t("banner_subtitle")}
             </p>
             <h1 className="text-[28px] md:text-4xl font-extrabold">
-              {t('banner_title')}
+              {t("banner_title")}
             </h1>
             <Link href={depositModalLink}>
               <Button className="w-max" variant={`primary`}>
-                {t('deposit_now')}
+                {t("deposit_now")}
               </Button>
             </Link>
           </div>
           <Image
             src={`/imgs/promotion-banner.svg`}
-            alt="promotion-banner"
+            className="absolute right-4 md:-right-9 md:relative w-full max-w-[40%] md:max-w-[60%] h-auto"
             width={608}
             height={232}
-            className="absolute right-4 md:-right-9 md:relative w-full max-w-[40%] md:max-w-[60%] h-auto"
+            alt="Promotion Banner"
           />
         </BannerWrapper>
 
@@ -103,11 +110,11 @@ const DynamicContent = async ({
   filter: string;
   searchParams: URLSearchParams;
 }) => {
-  const t = await getTranslations('promotions_page');
+  const t = await getTranslations("promotions_page");
   const { data: promotions, pagination } = await getPromotionsData(
     filter as "all" | "ended",
     page,
-    PAGINATION_LIMIT_PER_PAGE
+    PAGINATION_LIMIT_PER_PAGE,
   );
 
   return (
@@ -119,10 +126,10 @@ const DynamicContent = async ({
             key={promotion._id}
             src={promotion.thumbnail}
             title={promotion.title}
-            endDate={t('ends', {
-              date: format(new Date(promotion.endDate), "M/d/yyyy, h:mm:ss a")
+            endDate={t("ends", {
+              date: format(new Date(promotion.endDate), "M/d/yyyy, h:mm:ss a"),
             })}
-            status={promotion.isUse ? t('in_progress') : t('ended')}
+            status={promotion.isUse ? t("in_progress") : t("ended")}
             searchParams={searchParams}
           />
         ))}
@@ -142,7 +149,7 @@ const DynamicContent = async ({
 
               {getPaginationItems(
                 pagination.currentPage,
-                pagination.totalPages
+                pagination.totalPages,
               ).map((item, index) => (
                 <PaginationItem key={index}>
                   {typeof item === "string" ? (

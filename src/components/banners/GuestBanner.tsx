@@ -14,27 +14,26 @@ export default function GuestBanner({ banners }: { banners: BannerItem[] }) {
       <div className="rounded-[36px] overflow-hidden bg-neutral/5">
         <Carousel>
           <CarouselContent>
-            {
-              banners.map((banner: BannerItem, index) => (
-                <CarouselItem key={index}>
-                  <div className="rounded-[36px] overflow-hidden">
-                    <picture>
-                      <source
-                        srcSet={banner.thumbnail}
-                        media="(min-width: 768px)"
-                      />
-                      <Image
-                        src={banner.mobileThumbnail}
-                        alt="Responsive Image"
-                        width={500}
-                        height={300}
-                        priority
-                        className="w-full"
-                      />
-                    </picture>
-                  </div>
-                </CarouselItem>
-              ))}
+            {banners.map((banner: BannerItem, index) => (
+              <CarouselItem key={index}>
+                <div className="rounded-[36px] overflow-hidden">
+                  <picture>
+                    <source
+                      srcSet={banner.thumbnail}
+                      media="(min-width: 768px)"
+                    />
+                    <Image
+                      src={banner.mobileThumbnail}
+                      className="w-full"
+                      width={500}
+                      height={300}
+                      alt="Responsive Image for Banner mobile thumbnail"
+                      priority
+                    />
+                  </picture>
+                </div>
+              </CarouselItem>
+            ))}
           </CarouselContent>
 
           <CarouselPagination

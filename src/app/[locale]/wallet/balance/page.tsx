@@ -1,4 +1,5 @@
 "use client";
+
 import InfoCard from "@/components/cards/info/statInfoCard";
 // import ProgressBar from "@/components/progress/ProgressBar";
 import TabWrapper from "@/components/wrapper/tabWrapper";
@@ -6,7 +7,7 @@ import { userSelectors } from "@/store/user.store";
 import { useTranslations } from "next-intl";
 
 export default function Page() {
-  const t = useTranslations('info_card');
+  const t = useTranslations("info_card");
   const user = userSelectors.use.user();
   return (
     user && (
@@ -16,9 +17,9 @@ export default function Page() {
         // className="grid md:grid-cols-2 lg:grid-cols-2 gap-3 space-y-0"
         >
           <InfoCard
-            title={t('amount_held')}
+            title={t("amount_held")}
             description={user.wallets.balance.toString()}
-          // className="h-[120px] md:h-[146px] justify-between"
+            // className="h-[120px] md:h-[146px] justify-between"
           />
 
           {/* <InfoCard

@@ -36,7 +36,7 @@ type Props = {
 };
 
 export default function DepositForm({ currencies }: Props) {
-  const t = useTranslations('wallet_forms');
+  const t = useTranslations("wallet_forms");
   const [loading, setLoading] = useState<boolean>(false);
   const [copied, setCopied] = useState(false);
   const [address, setAddress] = useState("");
@@ -59,7 +59,7 @@ export default function DepositForm({ currencies }: Props) {
     const selectedCurrency = form.getValues("currency");
     if (selectedNetwork && selectedNetwork != "") {
       setSelectedNetwork(
-        networks.find((item: any) => item.network == selectedNetwork)
+        networks.find((item: any) => item.network == selectedNetwork),
       );
     }
     if (!selectedCurrency || !selectedNetwork) return;
@@ -67,7 +67,7 @@ export default function DepositForm({ currencies }: Props) {
     setLoading(true);
     const wallet = await GetWalletAddressAction(
       selectedCurrency,
-      selectedNetwork
+      selectedNetwork,
     );
     setAddress(wallet ?? "");
     setLoading(false);
@@ -76,7 +76,7 @@ export default function DepositForm({ currencies }: Props) {
   const onCurrencyChange = useCallback(
     (selectedCurrency: string) => {
       const currencyData = currencies.find(
-        (c) => c.symbol === selectedCurrency
+        (c) => c.symbol === selectedCurrency,
       );
       form.setValue("currency", selectedCurrency);
 
@@ -101,7 +101,7 @@ export default function DepositForm({ currencies }: Props) {
       if (defaultNetwork) {
         onNetworkChange(defaultNetwork);
         setSelectedNetwork(
-          availableNetworks.find((item: any) => item.network == defaultNetwork)
+          availableNetworks.find((item: any) => item.network == defaultNetwork),
         );
       } else {
         setAddress(""); // reset if no network
@@ -109,7 +109,7 @@ export default function DepositForm({ currencies }: Props) {
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [currencies]
+    [currencies],
   );
 
   useEffect(() => {
@@ -129,7 +129,7 @@ export default function DepositForm({ currencies }: Props) {
             name="currency"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t('currency')}</FormLabel>
+                <FormLabel>{t("currency")}</FormLabel>
                 <Select
                   {...currencySelect}
                   value={field.value}
@@ -140,7 +140,7 @@ export default function DepositForm({ currencies }: Props) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder={t('select_currency')} />
+                      <SelectValue placeholder={t("select_currency")} />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-w-full">
@@ -152,10 +152,10 @@ export default function DepositForm({ currencies }: Props) {
                       >
                         <Image
                           src={`/imgs/coins/${currency.symbol}.svg`}
-                          alt={currency.symbol}
+                          className="w-5 h-5 rounded-full"
                           width={20}
                           height={20}
-                          className="w-5 h-5 rounded-full"
+                          alt={currency.symbol}
                           priority={true}
                         />
                         <span>{currency.symbol}</span>
@@ -174,7 +174,7 @@ export default function DepositForm({ currencies }: Props) {
             name="network"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t('network')}</FormLabel>
+                <FormLabel>{t("network")}</FormLabel>
                 <Select
                   {...networkSelect}
                   value={field.value}
@@ -188,7 +188,7 @@ export default function DepositForm({ currencies }: Props) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder={t('select_network')} />
+                      <SelectValue placeholder={t("select_network")} />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-w-full">
@@ -260,23 +260,23 @@ export default function DepositForm({ currencies }: Props) {
         {selectedNetwork && (
           <div className="w-full flex flex-col gap-2 bg-foreground/5 p-3 rounded-xl">
             <div className="flex items-center justify-between w-full text-[13px]">
-              <span className="text-foreground/60">{t('minimum_deposit')}</span>
+              <span className="text-foreground/60">{t("minimum_deposit")}</span>
               <div className="flex items-center gap-1">
                 {selectedNetwork?.depositMin}
                 <Image
-                  src={`/imgs/coins/${form.getValues('currency')}.svg`}
-                  alt={form.getValues('currency')}
+                  src={`/imgs/coins/${form.getValues("currency")}.svg`}
+                  className="w-5 h-5 rounded-full"
                   width={20}
                   height={20}
-                  className="w-5 h-5 rounded-full"
+                  alt={form.getValues("currency")}
                   priority={true}
                 />
               </div>
             </div>
             <div className="flex items-center justify-between w-full text-[13px]">
-              <span className="text-foreground/60">{t('credited')}</span>
+              <span className="text-foreground/60">{t("credited")}</span>
               <div className="flex items-center gap-1">
-                {selectedNetwork?.minConfirm} {t('confirmation')}
+                {selectedNetwork?.minConfirm} {t("confirmation")}
               </div>
             </div>
           </div>

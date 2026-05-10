@@ -12,27 +12,30 @@ export default function WalletBtn() {
     walletModal.onOpen({ tab: "deposit" });
   };
 
-  return user && (
-    <>
-      <div className="flex items-center justify-between bg-neutral/5 border-neutral/5 rounded-2xl h-[42px] max-w-[320px] pl-0 p-1">
-        <Button
-          onClick={onWalletModal}
-          className="h-[36px] flex items-center gap-9 outline-none cursor-pointer pl-3 bg-transparent border-transparent pr-2"
-        >
-          <div className="flex items-center gap-2">
-            <Image
-              src={`/imgs/coins/usdt.svg`}
-              alt={"usdt"}
-              width={20}
-              height={20}
-              className="w-5 h-5 rounded-full"
-              priority={true}
-            />
-            <span className="text-xs font-medium">USDT</span>
-          </div>
-          <span className="text-xs font-medium ml-auto">{user?.wallets?.balance || 0}</span>
-        </Button>
-        {/* <div className="flex items-center gap-2 h-full">
+  return (
+    user && (
+      <>
+        <div className="flex items-center justify-between bg-neutral/5 border-neutral/5 rounded-2xl h-[42px] max-w-[320px] pl-0 p-1">
+          <Button
+            onClick={onWalletModal}
+            className="h-[36px] flex items-center gap-9 outline-none cursor-pointer pl-3 bg-transparent border-transparent pr-2"
+          >
+            <div className="flex items-center gap-2">
+              <Image
+                src={`/imgs/coins/usdt.svg`}
+                className="w-5 h-5 rounded-full"
+                width={20}
+                height={20}
+                alt="USDT"
+                priority={true}
+              />
+              <span className="text-xs font-medium">USDT</span>
+            </div>
+            <span className="text-xs font-medium ml-auto">
+              {user?.wallets?.balance || 0}
+            </span>
+          </Button>
+          {/* <div className="flex items-center gap-2 h-full">
           <Button
             onClick={() => unlockWalletModal.onOpen()}
             variant={"primary"}
@@ -44,7 +47,8 @@ export default function WalletBtn() {
             <IconBase icon={ICONS.LOCKED} className="!size-4" />
           </Button>
         </div> */}
-      </div>
-    </>
+        </div>
+      </>
+    )
   );
 }

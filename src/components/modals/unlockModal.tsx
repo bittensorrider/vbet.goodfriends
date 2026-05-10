@@ -11,33 +11,29 @@ import { useTranslations } from "next-intl";
 type Props = ModalControls<"unlock">;
 
 export default function UnlockBonusModal({ isOpen, onClose }: Props) {
-  const t = useTranslations('unlock_modal');
+  const t = useTranslations("unlock_modal");
 
   return (
-    <ModalLayout
-      isOpen={isOpen}
-      onClose={onClose}
-      ariaLabel={t('title')}
-    >
+    <ModalLayout isOpen={isOpen} onClose={onClose} ariaLabel={t("title")}>
       <div className="flex flex-col items-center gap-1">
         <div className="flex flex-col items-center gap-2">
           <Logo withTitle={false} className="w-[40px] h-[35px]" />
           <h6 className="text-xl font-semibold text-foreground">
-            {t('title')}
+            {t("title")}
           </h6>
         </div>
       </div>
 
       <div className="flex flex-col gap-3 w-full ">
         <div className="flex items-center justify-between w-full">
-          <span>{t('currency_label')}</span>
+          <span>{t("currency_label")}</span>
           <div className="relative flex items-center gap-[6px]">
             <Image
               src={`/imgs/coins/btc.svg`}
-              alt="btc"
+              className="size-6 rounded-full"
               width={24}
               height={24}
-              className="size-6 rounded-full"
+              alt="BTC (Bitcoin)"
             />
             <span className="text-foreground text-base font-medium">
               BTC (Bitcoin)
@@ -47,13 +43,13 @@ export default function UnlockBonusModal({ isOpen, onClose }: Props) {
 
         <div className="flex items-center justify-between bg-primary/10 border border-primary rounded-2xl p-6">
           <span className="text-sm font-semibold text-foreground">
-            {t('unlocked_bonus')}
+            {t("unlocked_bonus")}
           </span>
-          <Button variant={"primary"}>{t('bonus_amount')}</Button>
+          <Button variant={"primary"}>{t("bonus_amount")}</Button>
         </div>
 
         <Input
-          placeholder={t('min_placeholder')}
+          placeholder={t("min_placeholder")}
           className="bg-foreground/5 h-[41px]"
           render={
             <Button
@@ -62,7 +58,7 @@ export default function UnlockBonusModal({ isOpen, onClose }: Props) {
               size={"sm"}
               className="rounded-lg text-xs !absolute right-1 top-1/2 -translate-y-1/2 !h-[20px] !min-h-[32px]"
             >
-              {t('claim_bonus')}
+              {t("claim_bonus")}
             </Button>
           }
         />
@@ -71,22 +67,24 @@ export default function UnlockBonusModal({ isOpen, onClose }: Props) {
         <div className="flex  w-full items-center justify-between">
           <div className="flex items-center gap-1.5">
             <IconBase icon={ICONS.LOCKED} className="size-5" />
-            <span className="text-sm font-semibold">{t('locked_bonus')}</span>
+            <span className="text-sm font-semibold">{t("locked_bonus")}</span>
           </div>
-          <span className="text-danger text-xs font-medium">{t('locked_bonus_amount')}</span>
+          <span className="text-danger text-xs font-medium">
+            {t("locked_bonus_amount")}
+          </span>
         </div>
         <p className="text-xs font-medium text-foreground/70">
-          {t('unlock_formula')} <br />
-          {t('converting_note')}
+          {t("unlock_formula")} <br />
+          {t("converting_note")}
         </p>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
         <Button className="w-full rounded-xl" variant={"default"} size={"sm"}>
-          {t('go_to_casino')}
+          {t("go_to_casino")}
         </Button>
         <Button className="w-full rounded-xl" variant={"primary"} size={"sm"}>
-          {t('go_to_sports')}
+          {t("go_to_sports")}
         </Button>
       </div>
     </ModalLayout>

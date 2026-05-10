@@ -19,9 +19,9 @@ export default function PromotionModal({
   closeWithParams,
   getParam,
 }: Props) {
-  const t = useTranslations('promotion_modal');
+  const t = useTranslations("promotion_modal");
   const [promotionData, setPromotionData] = useState<PromotionItem | null>(
-    null
+    null,
   );
   const [loading, setLoading] = useState<boolean>(true);
   const handleClose = () => {
@@ -31,7 +31,7 @@ export default function PromotionModal({
   useEffect(() => {
     const getPromotion = async () => {
       const res = await fetcher<PromotionItem>(
-        `${API_ROUTES.SITE.PROMOTIONS.LIST}/${getParam("promotionId", "")}`
+        `${API_ROUTES.SITE.PROMOTIONS.LIST}/${getParam("promotionId", "")}`,
       );
       setLoading(false);
       if (!res.success) {
@@ -47,7 +47,7 @@ export default function PromotionModal({
     <ModalLayout
       isOpen={isOpen}
       onClose={handleClose}
-      ariaLabel={t('promotion_title')}
+      ariaLabel={t("promotion_title")}
       closeBtnClassname="bg-black/60 rounded-full"
       className="!max-w-[596px] p-4"
     >
@@ -60,17 +60,17 @@ export default function PromotionModal({
               <div>
                 <Image
                   src={promotionData.thumbnail}
-                  alt={promotionData.title}
+                  className="w-full object-cover rounded-3xl"
                   width={586}
                   height={253}
-                  className="w-full object-cover rounded-3xl"
+                  alt={promotionData.title}
                   style={{ aspectRatio: 586 / 253 }}
                 />
                 <PromotionInfo
                   title={promotionData.title}
                   endDate={format(
                     new Date(promotionData.endDate),
-                    "'Ends' M/d/yyyy, h:mm:ss a"
+                    "'Ends' M/d/yyyy, h:mm:ss a",
                   )}
                   status={promotionData.isUse ? "In Progress" : "Ended"}
                 />

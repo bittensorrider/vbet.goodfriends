@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import IconBase from "@/components/icon/iconBase";
 import {
   Accordion,
@@ -28,8 +30,13 @@ const accordionData = [
 </ul>
     `,
   },
-
 ];
+
+export const metadata: Metadata = {
+  title: "Registration and Login | GoodFriends",
+  description: "Information about registration and login",
+};
+
 export default function Page() {
   return (
     <TabWrapper>

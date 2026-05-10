@@ -93,10 +93,10 @@ export default function TwoFactorForm() {
             <div className="">
               <Image
                 src={`/imgs/qr.jpg`}
-                alt="qr"
+                className="m-auto md:m-0 w-[154px] rounded-xl invert-100 border"
                 width={75}
                 height={75}
-                className="m-auto md:m-0 w-[154px] rounded-xl invert-100 border"
+                alt="QR Code for GoodFriends"
               />
             </div>
 
@@ -120,10 +120,10 @@ export default function TwoFactorForm() {
             <Button variant={`primary`} className="w-full md:w-max md:ml-auto">
               <Image
                 src={"/imgs/social-platform-logos/google.svg"}
-                alt="google"
+                className="w-[16px]"
                 width={32}
                 height={32}
-                className="w-[16px]"
+                alt="Verify with Google"
               />
               Re-verify with Google
             </Button>

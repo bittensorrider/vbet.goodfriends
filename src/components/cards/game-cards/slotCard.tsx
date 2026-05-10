@@ -22,15 +22,19 @@ export default function Card({
     <Link href={href} className="w-full flex flex-col">
       <div
         className="group relative w-full rounded-t-2xl overflow-hidden"
-        style={{ aspectRatio: props.style?.aspectRatio ? props.style.aspectRatio : 150 / 185 }}
+        style={{
+          aspectRatio: props.style?.aspectRatio
+            ? props.style.aspectRatio
+            : 150 / 185,
+        }}
       >
         <Image
           src={src}
-          alt={title}
+          className="relative z-10 w-full h-full object-cover group-hover:scale-105 duration-400 transition-all"
           width={150}
           height={185}
+          alt={title}
           priority={priority}
-          className="relative z-10 w-full h-full object-cover group-hover:scale-105 duration-400 transition-all"
         />
 
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">

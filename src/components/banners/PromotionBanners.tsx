@@ -27,9 +27,9 @@ const PromotionBanner = ({
       <Image
         className="group-hover:scale-105 w-full h-auto object-cover rounded-2xl md:rounded-[36px] transition-all duration-500"
         src={src}
-        alt={title}
         width={438}
         height={274}
+        alt={title}
         priority={true}
       />
       <div

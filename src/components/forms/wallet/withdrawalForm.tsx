@@ -41,7 +41,7 @@ type Props = {
 };
 
 export default function WithdrawalForm({ currencies }: Props) {
-  const t = useTranslations('wallet_forms');
+  const t = useTranslations("wallet_forms");
   const [copied, setCopied] = useState(false);
   const currencySelect = useSelect();
   const networkSelect = useSelect();
@@ -74,7 +74,7 @@ export default function WithdrawalForm({ currencies }: Props) {
   const onCurrencyChange = useCallback(
     (selectedCurrency: string) => {
       const currencyData = currencies.find(
-        (c: any) => c.symbol === selectedCurrency
+        (c: any) => c.symbol === selectedCurrency,
       );
       form.setValue("currency", selectedCurrency);
 
@@ -85,7 +85,7 @@ export default function WithdrawalForm({ currencies }: Props) {
       setNetworks(availableNetworks);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [currencies]
+    [currencies],
   );
 
   useEffect(() => {
@@ -104,7 +104,7 @@ export default function WithdrawalForm({ currencies }: Props) {
             name="currency"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t('currency')}</FormLabel>
+                <FormLabel>{t("currency")}</FormLabel>
                 <Select
                   {...currencySelect}
                   onValueChange={(value: any) => {
@@ -115,7 +115,7 @@ export default function WithdrawalForm({ currencies }: Props) {
                 >
                   <FormControl>
                     <SelectTrigger className="relative">
-                      <SelectValue placeholder={t('select_currency')} />
+                      <SelectValue placeholder={t("select_currency")} />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-w-full">
@@ -129,10 +129,10 @@ export default function WithdrawalForm({ currencies }: Props) {
                         >
                           <Image
                             src={`/imgs/coins/${currency.symbol}.svg`}
-                            alt={currency.symbol}
+                            className="w-5 h-5 rounded-full"
                             width={20}
                             height={20}
-                            className="w-5 h-5 rounded-full"
+                            alt={currency.symbol}
                             priority={true}
                           />
                           <span>{currency.symbol}</span>
@@ -149,14 +149,14 @@ export default function WithdrawalForm({ currencies }: Props) {
             name="network"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t('network')}</FormLabel>
+                <FormLabel>{t("network")}</FormLabel>
                 <Select
                   {...networkSelect}
                   onValueChange={(value: string) => {
                     if (value !== "") {
                       field.onChange(value);
                       setSelectedNetwork(
-                        networks.find((item: any) => item.network == value)
+                        networks.find((item: any) => item.network == value),
                       );
                     }
                   }}
@@ -164,7 +164,7 @@ export default function WithdrawalForm({ currencies }: Props) {
                 >
                   <FormControl>
                     <SelectTrigger>
-                      <SelectValue placeholder={t('select_network')} />
+                      <SelectValue placeholder={t("select_network")} />
                     </SelectTrigger>
                   </FormControl>
                   <SelectContent className="max-w-full">
@@ -189,10 +189,10 @@ export default function WithdrawalForm({ currencies }: Props) {
             name="address"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t('address')}</FormLabel>
+                <FormLabel>{t("address")}</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={t('amount_placeholder')}
+                    placeholder={t("amount_placeholder")}
                     {...field}
                     render={
                       <Button
@@ -223,10 +223,10 @@ export default function WithdrawalForm({ currencies }: Props) {
             name="amount"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>{t('amount')}</FormLabel>
+                <FormLabel>{t("amount")}</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder={t('amount_placeholder')}
+                    placeholder={t("amount_placeholder")}
                     {...field}
                     render={
                       <Button
@@ -240,19 +240,19 @@ export default function WithdrawalForm({ currencies }: Props) {
                           if (
                             balance >=
                             selectedNetwork.withdrawMin +
-                            selectedNetwork.withdrawFee
+                              selectedNetwork.withdrawFee
                           )
                             form.setValue(
                               "amount",
                               calcDecimals(
                                 balance,
                                 selectedNetwork.withdrawFee,
-                                "-"
-                              ).toString() ?? ""
+                                "-",
+                              ).toString() ?? "",
                             );
                         }}
                       >
-                        {t('max')}
+                        {t("max")}
                       </Button>
                     }
                   />
@@ -264,35 +264,37 @@ export default function WithdrawalForm({ currencies }: Props) {
         </div>
 
         <Button className="w-full rounded-xl" variant={"primary"} size={"sm"}>
-          {t('withdrawal')}
+          {t("withdrawal")}
         </Button>
 
         {selectedNetwork && (
           <div className="w-full flex flex-col gap-2 bg-foreground/5 p-3 rounded-xl">
             <div className="flex items-center justify-between w-full text-[13px]">
-              <span className="text-foreground/60">{t('minimum_withdrawal')}</span>
+              <span className="text-foreground/60">
+                {t("minimum_withdrawal")}
+              </span>
               <div className="flex items-center gap-1">
                 {selectedNetwork?.withdrawMin}
                 <Image
-                  src={`/imgs/coins/${form.getValues('currency')}.svg`}
-                  alt={form.getValues('currency')}
+                  src={`/imgs/coins/${form.getValues("currency")}.svg`}
+                  className="w-5 h-5 rounded-full"
                   width={20}
                   height={20}
-                  className="w-5 h-5 rounded-full"
+                  alt={form.getValues("currency")}
                   priority={true}
                 />
               </div>
             </div>
             <div className="flex items-center justify-between w-full text-[13px]">
-              <span className="text-foreground/60">{t('transaction_fee')}</span>
+              <span className="text-foreground/60">{t("transaction_fee")}</span>
               <div className="flex items-center gap-1">
                 {selectedNetwork?.withdrawFee}
                 <Image
-                  src={`/imgs/coins/${form.getValues('currency')}.svg`}
-                  alt={form.getValues('currency')}
+                  src={`/imgs/coins/${form.getValues("currency")}.svg`}
+                  className="w-5 h-5 rounded-full"
                   width={20}
                   height={20}
-                  className="w-5 h-5 rounded-full"
+                  alt={form.getValues("currency")}
                   priority={true}
                 />
               </div>

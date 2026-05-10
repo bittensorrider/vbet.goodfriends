@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import Card from "@/components/cards/game-cards/slotCard";
 import SlotGridContainer from "@/components/common/containers/slotGridContainer";
 import NoResults from "@/components/common/page/NoResults";
@@ -28,20 +30,30 @@ type Props = {
   }>;
 };
 
+export const metadata: Metadata = {
+  title: "Games | GoodFriends",
+  description: "Browse our collection of games",
+};
+
 export default async function Page({ searchParams }: Props) {
-  const t = await getTranslations('games_page');
+  const t = await getTranslations("games_page");
   const activeType = (await searchParams).type || "all";
   const activeProvider = (await searchParams).provider || "";
   const activePage = Number((await searchParams).page) || 1;
-  const {
-    pagination,
-    providers,
-  } = await getGameList(activeType, activeProvider, "", activePage, 25);
+  const { pagination, providers } = await getGameList(
+    activeType,
+    activeProvider,
+    "",
+    activePage,
+    25,
+  );
 
   return (
     <>
       <div className="flex flex-col gap-2.5">
-        <PageTitle>{activeType == "live" ? t("page_title_casino") : t("page_title_slot")}</PageTitle>
+        <PageTitle>
+          {activeType == "live" ? t("page_title_casino") : t("page_title_slot")}
+        </PageTitle>
         <PageFilterBtns
           data={[
             { _id: "", code: "", name: t("filter_all"), type: "", status: 1 },
@@ -84,7 +96,7 @@ export default async function Page({ searchParams }: Props) {
 
               {getPaginationItems(
                 pagination.currentPage,
-                pagination.totalPages
+                pagination.totalPages,
               ).map((item, index) => (
                 <PaginationItem key={index}>
                   {typeof item === "string" ? (
@@ -124,9 +136,13 @@ const DynamicContent = async ({
   activeProvider: string;
   activePage: number;
 }) => {
-  const {
-    data: games,
-  } = await getGameList(activeType, activeProvider, "", activePage, 25);
+  const { data: games } = await getGameList(
+    activeType,
+    activeProvider,
+    "",
+    activePage,
+    25,
+  );
 
   return (
     <SlotGridContainer>

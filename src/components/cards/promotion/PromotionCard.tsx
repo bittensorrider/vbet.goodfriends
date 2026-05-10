@@ -24,8 +24,8 @@ export default function PromotionCard({
 }: Props) {
   const params = new URLSearchParams(searchParams.toString());
   params.set("promotionId", id);
-  params.set("modal", "promotion")
-  const href = `?${params.toString()}`
+  params.set("modal", "promotion");
+  const href = `?${params.toString()}`;
   return (
     <Link
       href={href}
@@ -40,9 +40,9 @@ export default function PromotionCard({
       >
         <Image
           src={src}
+          className="group-hover:scale-110 duration-500 object-cover transition-all"
           alt={title}
           fill
-          className="group-hover:scale-110 duration-500 object-cover transition-all"
         />
       </div>
       <PromotionInfo title={title} endDate={endDate} status={status} />
@@ -56,13 +56,18 @@ export const PromotionInfo = ({
   status,
 }: Omit<Props, "src" | "id" | "searchParams">) => {
   // Check if status indicates progress (not ended)
-  const isInProgress = !status.toLowerCase().includes("ended") && !status.toLowerCase().includes("kết thúc");
-  const t = useTranslations('promotions_page');
+  const isInProgress =
+    !status.toLowerCase().includes("ended") &&
+    !status.toLowerCase().includes("kết thúc");
+  const t = useTranslations("promotions_page");
 
   // Map status to translation key
-  let statusKey = 'in_progress';
-  if (status.toLowerCase().includes('ended') || status.toLowerCase().includes('kết thúc')) {
-    statusKey = 'ended';
+  let statusKey = "in_progress";
+  if (
+    status.toLowerCase().includes("ended") ||
+    status.toLowerCase().includes("kết thúc")
+  ) {
+    statusKey = "ended";
   }
 
   return (

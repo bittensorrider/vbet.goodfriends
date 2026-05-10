@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { GetBettingListAction } from "@/actions/user.actions";
 import BetHistoryFilter from "@/components/filter/betHistoryFilter";
 import {
@@ -19,9 +21,7 @@ import {
 } from "@/components/ui/table";
 import TabWrapper from "@/components/wrapper/tabWrapper";
 import { validLimits } from "@/constants/common";
-import {
-  getPaginationItems,
-} from "@/helpers/pagination.helpers";
+import { getPaginationItems } from "@/helpers/pagination.helpers";
 import { formatDate } from "@/lib/utils";
 import { BettingItem } from "@/types/betting.types";
 import { getTranslations } from "next-intl/server";
@@ -37,8 +37,13 @@ type Props = {
   }>;
 };
 
+export const metadata: Metadata = {
+  title: "Bet History | GoodFriends",
+  description: "View your bet history",
+};
+
 export default async function Page({ searchParams }: Props) {
-  const t = await getTranslations('bet_history_page');
+  const t = await getTranslations("bet_history_page");
   const query = await searchParams;
 
   const gameName = query.gameName || undefined;
@@ -56,22 +61,22 @@ export default async function Page({ searchParams }: Props) {
     limit,
     startDate,
     endDate,
-    gameName
+    gameName,
   );
 
   return (
-    <TabWrapper title={t('page_title')} className="grid">
+    <TabWrapper title={t("page_title")} className="grid">
       <BetHistoryFilter />
 
       <Table>
         <TableHeader>
           <TableRow className="!bg-transparent">
-            <TableHead>{t('table_headers.game')}</TableHead>
-            <TableHead>{t('table_headers.order_id')}</TableHead>
-            <TableHead>{t('table_headers.date')}</TableHead>
-            <TableHead>{t('table_headers.type')}</TableHead>
-            <TableHead>{t('table_headers.bet')}</TableHead>
-            <TableHead>{t('table_headers.win')}</TableHead>
+            <TableHead>{t("table_headers.game")}</TableHead>
+            <TableHead>{t("table_headers.order_id")}</TableHead>
+            <TableHead>{t("table_headers.date")}</TableHead>
+            <TableHead>{t("table_headers.type")}</TableHead>
+            <TableHead>{t("table_headers.bet")}</TableHead>
+            <TableHead>{t("table_headers.win")}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -102,7 +107,7 @@ export default async function Page({ searchParams }: Props) {
 
               {getPaginationItems(
                 pagination.currentPage,
-                pagination.totalPages
+                pagination.totalPages,
               ).map((item, index) => (
                 <PaginationItem key={index}>
                   {typeof item === "string" ? (

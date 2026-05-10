@@ -43,11 +43,17 @@ export default function AvatarUploader({ initialFile, onChange }: Props) {
         {...getRootProps()}
         className="absolute size-8 right-0 bg-[#262E3C] rounded-full cursor-pointer hover:opacity-90 group transition-all bottom-0 z-10 grid place-content-center"
       >
-        <IconBase icon={ICONS.EDIT_PENCIL} className="group-hover:scale-105 transition-all size-4 text-success" />
+        <IconBase
+          icon={ICONS.EDIT_PENCIL}
+          className="group-hover:scale-105 transition-all size-4 text-success"
+        />
       </div>
       {previewUrl ? (
         <Avatar className="w-full h-full border-[1.5px] border-primary p-0.5">
-          <AvatarImage src={previewUrl} className="bg-black rounded-full object-cover" />
+          <AvatarImage
+            src={previewUrl}
+            className="bg-black rounded-full object-cover"
+          />
           <AvatarFallback>FN</AvatarFallback>
         </Avatar>
       ) : (

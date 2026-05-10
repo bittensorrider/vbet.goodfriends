@@ -131,10 +131,10 @@ export const Message = ({
         <div className="flex items-center gap-2">
           <Image
             src={src}
-            alt={alt}
+            className="size-8"
             width={50}
             height={50}
-            className="size-8"
+            alt={alt}
             priority={true}
           />
           <p className="text-sm font-bold">{author}</p>

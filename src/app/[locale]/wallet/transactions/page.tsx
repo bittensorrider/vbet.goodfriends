@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import { GetTransactionListAction } from "@/actions/user.actions";
 import TransactionsFilter from "@/components/filter/transactionsFileter";
 import {
@@ -35,9 +37,13 @@ type Props = {
   }>;
 };
 
+export const metadata: Metadata = {
+  title: "Transactions | GoodFriends",
+  description: "View your transaction history",
+};
 
 export default async function Page({ searchParams }: Props) {
-  const t = await getTranslations('transactions_page');
+  const t = await getTranslations("transactions_page");
   const query = await searchParams;
   const activePage = Number(query.page) || 1;
   const limit = validLimits.includes(query.limit || "")
@@ -46,46 +52,48 @@ export default async function Page({ searchParams }: Props) {
   const startDate = query.startDate || undefined;
   const endDate = query.endDate || undefined;
   const type = query.type;
-  const txID = query.txID
-  
+  const txID = query.txID;
+
   const { data: transactions, pagination } = await GetTransactionListAction(
     txID,
     activePage,
     type,
     limit,
     startDate,
-    endDate
+    endDate,
   );
 
   return (
-    <TabWrapper title={t('page_title')} className="grid">
+    <TabWrapper title={t("page_title")} className="grid">
       <TransactionsFilter />
 
       <Table className="overflow-auto">
         <TableHeader>
           <TableRow className="!bg-transparent">
-            <TableHead>{t('table_headers.type')}</TableHead>
-            <TableHead>{t('table_headers.date')}</TableHead>
-            <TableHead>{t('table_headers.status')}</TableHead>
-            <TableHead>{t('table_headers.view')}</TableHead>
-            <TableHead>{t('table_headers.amount')}</TableHead>
+            <TableHead>{t("table_headers.type")}</TableHead>
+            <TableHead>{t("table_headers.date")}</TableHead>
+            <TableHead>{t("table_headers.status")}</TableHead>
+            <TableHead>{t("table_headers.view")}</TableHead>
+            <TableHead>{t("table_headers.amount")}</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {transactions.map((item: TransactionItem, index: number) => (
             <TableRow key={index}>
               <TableCell>
-                {item.type == "deposit" ? t('transaction_types.deposit') : t('transaction_types.withdraw')}
+                {item.type == "deposit"
+                  ? t("transaction_types.deposit")
+                  : t("transaction_types.withdraw")}
               </TableCell>
               <TableCell>{formatDate(item.updatedAt)}</TableCell>
               <TableCell variant="success">
                 {item.status == "Paid" || item.status == "Complete"
-                  ? t('status.confirmed')
+                  ? t("status.confirmed")
                   : ""}
               </TableCell>
               <TableCell>
                 <a href={item.scanUrl} target="_blank">
-                  {t('view_link')}
+                  {t("view_link")}
                 </a>
               </TableCell>
               <TableCell>{item.amount}</TableCell>
@@ -109,7 +117,7 @@ export default async function Page({ searchParams }: Props) {
 
               {getPaginationItems(
                 pagination.currentPage,
-                pagination.totalPages
+                pagination.totalPages,
               ).map((item, index) => (
                 <PaginationItem key={index}>
                   {typeof item === "string" ? (

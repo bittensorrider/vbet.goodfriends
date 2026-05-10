@@ -18,9 +18,9 @@ export default function AuthModal({
   getParam,
   setParam,
 }: Props) {
-  const t = useTranslations('auth_modal');
+  const t = useTranslations("auth_modal");
   const [activeTab, setActiveTab] = useState<AuthModalTab>(
-    getParam("tab", "login")
+    getParam("tab", "login"),
   );
   const [verifyEmail] = useState<string | null>(null);
 
@@ -77,9 +77,9 @@ export default function AuthModal({
             {getTitle()}
           </h6>
         </div>
-        <div
-          className="text-xs text-foreground/70 leading-[150%]"
-        >{getDescription(verifyEmail)}</div>
+        <div className="text-xs text-foreground/70 leading-[150%]">
+          {getDescription(verifyEmail)}
+        </div>
       </div>
 
       {(activeTab === "login" || activeTab === "register") && (
@@ -118,7 +118,7 @@ export default function AuthModal({
               >
                 <Image
                   src={"/imgs/social-platform-logos/google.svg"}
-                  alt="google"
+                  alt="Google"
                   width={32}
                   height={32}
                   className="w-[32px]"
@@ -130,10 +130,10 @@ export default function AuthModal({
               >
                 <Image
                   src={"/imgs/social-platform-logos/facebook.svg"}
-                  alt="facebook"
+                  className="w-[32px]"
                   width={32}
                   height={32}
-                  className="w-[32px]"
+                  alt="Facebook"
                 />
               </button>
               <button
@@ -142,10 +142,10 @@ export default function AuthModal({
               >
                 <Image
                   src={"/imgs/social-platform-logos/apple.svg"}
-                  alt="apple"
+                  className="w-[32px]"
                   width={32}
                   height={32}
-                  className="w-[32px]"
+                  alt="Apple"
                 />
               </button>
             </div>

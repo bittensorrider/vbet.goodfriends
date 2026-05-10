@@ -14,19 +14,19 @@ import { useTranslations } from "next-intl";
 type Props = ModalControls<"wallet">;
 
 const CurrentRolling = () => {
-  const t = useTranslations('wallet_modal');
+  const t = useTranslations("wallet_modal");
 
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center justify-between">
-        <span>{t('currency_label')}</span>
+        <span>{t("currency_label")}</span>
         <div className="relative flex items-center gap-[6px]">
           <Image
             src={`/imgs/coins/btc.svg`}
-            alt="btc"
+            className="size-6 rounded-full"
             width={24}
             height={24}
-            className="size-6 rounded-full"
+            alt="BTC (Bitcoin)"
           />
           <span className="text-foreground text-base font-medium">
             BTC (Bitcoin)
@@ -37,14 +37,15 @@ const CurrentRolling = () => {
         <div className="p-4 flex flex-col gap-4 bg-foreground/5 rounded-xl">
           <div className="flex flex-col text-sm gap-0.5">
             <p className="font-bold text-foreground/70">
-              {t('deposit_money')} <span className="text-foreground">10,000</span>
+              {t("deposit_money")}{" "}
+              <span className="text-foreground">10,000</span>
             </p>
             <p className="font-bold text-foreground/70">
-              {t('creation_date')}{" "}
+              {t("creation_date")}{" "}
               <span className="text-foreground">2024-02-10 10:12:51</span>
             </p>
             <p className="font-bold text-foreground/70">
-              {t('withdrawable')} <span className="text-foreground">595</span>
+              {t("withdrawable")} <span className="text-foreground">595</span>
             </p>
           </div>
 
@@ -52,8 +53,8 @@ const CurrentRolling = () => {
             <ProgressBar
               value={60}
               header={{
-                leftText: t('set_rolling'),
-                rightText: t('sports_betting'),
+                leftText: t("set_rolling"),
+                rightText: t("sports_betting"),
               }}
               footer={{
                 rightText: "0 - 50,000",
@@ -62,8 +63,8 @@ const CurrentRolling = () => {
             <ProgressBar
               value={10}
               header={{
-                leftText: t('set_rolling'),
-                rightText: t('casino_betting'),
+                leftText: t("set_rolling"),
+                rightText: t("casino_betting"),
               }}
               footer={{
                 rightText: "0 - 50,000",
@@ -72,8 +73,8 @@ const CurrentRolling = () => {
             <ProgressBar
               value={10}
               header={{
-                leftText: t('set_rolling'),
-                rightText: t('slot_betting'),
+                leftText: t("set_rolling"),
+                rightText: t("slot_betting"),
               }}
               footer={{
                 rightText: "0 - 50,000",
@@ -82,8 +83,8 @@ const CurrentRolling = () => {
             <ProgressBar
               value={100}
               header={{
-                leftText: t('set_rolling'),
-                rightText: t('holdem_betting'),
+                leftText: t("set_rolling"),
+                rightText: t("holdem_betting"),
               }}
               footer={{
                 rightText: "50,000 - 50,000",
@@ -92,8 +93,8 @@ const CurrentRolling = () => {
             <ProgressBar
               value={100}
               header={{
-                leftText: t('set_rolling'),
-                rightText: t('minigame_betting'),
+                leftText: t("set_rolling"),
+                rightText: t("minigame_betting"),
               }}
               footer={{
                 rightText: "50,000 - 50,000",
@@ -249,12 +250,12 @@ export default function WalletModal({
   setParam,
   getParam,
 }: Props) {
-  const t = useTranslations('wallet_modal');
+  const t = useTranslations("wallet_modal");
   const [activeTab, setActiveTab] = useState<WalletModalTab>(
-    getParam("tab", "deposit")
+    getParam("tab", "deposit"),
   );
 
-  const [currencies, setCurrencies] = useState<any>([])
+  const [currencies, setCurrencies] = useState<any>([]);
 
   useEffect(() => {
     setActiveTab(getParam("tab", "deposit"));
@@ -262,11 +263,11 @@ export default function WalletModal({
 
   useEffect(() => {
     const getCurrencyList = async () => {
-      const currencies = await GetCurrencyListAction()
-      setCurrencies(currencies)
-    }
+      const currencies = await GetCurrencyListAction();
+      setCurrencies(currencies);
+    };
     getCurrencyList();
-  }, [])
+  }, []);
 
   const onTabChange = (tab: WalletModalTab) => {
     setParam("tab", tab);
@@ -275,11 +276,11 @@ export default function WalletModal({
   const getTitle = () => {
     switch (activeTab) {
       case "deposit":
-        return t('manage_wallet_title');
+        return t("manage_wallet_title");
       case "withdraw":
-        return t('manage_wallet_title');
+        return t("manage_wallet_title");
       default:
-        return t('current_rolling_title');
+        return t("current_rolling_title");
     }
   };
 

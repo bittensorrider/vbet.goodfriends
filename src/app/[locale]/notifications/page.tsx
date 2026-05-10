@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 // import NotificationCard from "@/components/cards/notification-card/NotificationCard";
 // import NoResults from "@/components/common/page/NoResults";
 // import PageTitle from "@/components/common/page/pageTitle";
@@ -120,9 +122,11 @@
 //   );
 // }
 
+export const metadata: Metadata = {
+  title: "Notifications | GoodFriends",
+  description: "Latest notifications and updates",
+};
 
 export default async function Page() {
-  return (
-    <div></div>
-  )
+  return <div></div>;
 }

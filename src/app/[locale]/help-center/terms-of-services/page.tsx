@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import IconBase from "@/components/icon/iconBase";
 import {
   Accordion,
@@ -8,6 +9,11 @@ import {
 import TabWrapper from "@/components/wrapper/tabWrapper";
 import { ICONS } from "@/constants/icons";
 import { getNoticeData } from "@/helpers/notice.helpers";
+
+export const metadata: Metadata = {
+  title: "Terms of Services | GoodFriends",
+  description: "The terms and conditions of the GoodFriends service",
+};
 
 export default async function Page() {
   const { data: notices } = await getNoticeData("active", "rule", 1, 100);

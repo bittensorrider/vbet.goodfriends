@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import NoticeCard from "@/components/cards/notice-card/NoticeCard";
 import NoResults from "@/components/common/page/NoResults";
 import PageTitle from "@/components/common/page/pageTitle";
@@ -26,8 +28,13 @@ interface Props {
 
 const filterValidValues = ["all", "active", "inactive"];
 
+export const metadata: Metadata = {
+  title: "Notices | GoodFriends",
+  description: "Latest notices and announcements",
+};
+
 export default async function Page({ searchParams }: Props) {
-  const t = await getTranslations('notices_page');
+  const t = await getTranslations("notices_page");
   const queryParams = await searchParams;
   const activeFilter = filterValidValues.includes(queryParams.filter || "")
     ? queryParams.filter!
@@ -37,7 +44,7 @@ export default async function Page({ searchParams }: Props) {
   return (
     <div className="space-y-4">
       <div className="flex flex-col gap-2.5">
-        <PageTitle>{t('page_title')}</PageTitle>
+        <PageTitle>{t("page_title")}</PageTitle>
         <div className="flex md:w-[443px]">
           <TabFilter
             tabs={filterValidValues}
@@ -64,12 +71,12 @@ const DynamicContent = async ({
   page: number;
   activeFilter: string;
 }) => {
-  const t = await getTranslations('notices_page');
+  const t = await getTranslations("notices_page");
   const { data: notices, pagination } = await getNoticeData(
     activeFilter,
     "notice",
     page,
-    NOTICE_LIMIT_PER_PAGE
+    NOTICE_LIMIT_PER_PAGE,
   );
 
   return (
@@ -87,7 +94,7 @@ const DynamicContent = async ({
       ) : (
         <NoResults className="py-28">
           <p className="text-foreground/60 max-w-[178px] text-center">
-            {t('no_results', { filter: activeFilter })}
+            {t("no_results", { filter: activeFilter })}
           </p>
         </NoResults>
       )}
@@ -106,7 +113,7 @@ const DynamicContent = async ({
 
               {getPaginationItems(
                 pagination.currentPage,
-                pagination.totalPages
+                pagination.totalPages,
               ).map((item, index) => (
                 <PaginationItem key={index}>
                   {typeof item === "string" ? (

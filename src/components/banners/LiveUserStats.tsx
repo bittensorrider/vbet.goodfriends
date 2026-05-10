@@ -19,11 +19,11 @@ const LiveUserStatCard = ({
     <div className="relative flex flex-col gap-1">
       <Image
         src={src}
-        alt={alt}
+        className="w-full h-auto object-cover rounded-2xl"
         width={80}
         height={80}
-        className="w-full h-auto object-cover rounded-2xl"
         style={{ aspectRatio: 71 / 74 }}
+        alt={alt}
       />
       <div className="relative grid gap-[2px] overflow-hidden">
         <h6 className="text-xs font-medium truncate">{username}</h6>
@@ -36,7 +36,7 @@ const LiveUserStatCard = ({
 };
 
 export default function LiveUserStats() {
-  const t = useTranslations('banners');
+  const t = useTranslations("banners");
 
   return (
     <div className="relative w-full flex flex-col gap-3">

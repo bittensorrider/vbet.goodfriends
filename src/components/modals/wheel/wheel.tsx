@@ -40,10 +40,10 @@ export default function LuckyWheel() {
       <div className="relative  m-auto flex items-center justify-center w-[90vw] max-w-[412px] max-h-[412px] h-[90vw] rounded-full">
         <Image
           src={`/imgs/wheels/wheel-new.svg`}
-          alt="wheel"
+          className="!w-[100%] !h-[100%] !left-1/2 !top-1/2 -translate-y-1/2 -translate-x-1/2 z-[9]"
+          alt="Wheel New"
           fill
           priority={true}
-          className="!w-[100%] !h-[100%] !left-1/2 !top-1/2 -translate-y-1/2 -translate-x-1/2 z-[9]"
         />
 
         <div

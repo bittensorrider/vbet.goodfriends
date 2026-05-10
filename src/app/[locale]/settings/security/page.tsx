@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
+
 import PrivateInfoForm from "@/components/forms/settings/privateInfoForm";
 import TwoFactorForm from "@/components/forms/settings/twoFactorForm";
 import TabWrapper from "@/components/wrapper/tabWrapper";
+
+export const metadata: Metadata = {
+  title: "Security | GoodFriends",
+  description: "Manage your security settings",
+};
 
 export default function Page() {
   return (

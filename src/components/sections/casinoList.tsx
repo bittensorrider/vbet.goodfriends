@@ -44,23 +44,23 @@ const CasinoListCard = ({
       </div>
       <Image
         src={logo.src}
-        alt={logo.alt}
-        width={100}
-        height={46}
         className={`${cn(
           "absolute top-2 left-2 w-full max-w-[100px] z-10",
           logoClassName,
         )}`}
+        width={100}
+        height={46}
+        alt={logo.alt}
       />
       <Image
         src={additionalImg.src}
-        alt={additionalImg.alt}
-        width={146}
-        height={132}
         className={`${cn(
           "group-hover:w-[61%] duration-400 transition-all absolute w-[52%] md:w-[56%] h-auto bottom-[0px] right-[-10px]  object-cover",
           additionalImgClassName,
         )}`}
+        width={146}
+        height={132}
+        alt={additionalImg.alt}
       />
     </Link>
   );

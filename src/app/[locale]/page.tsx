@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 // import CategoryBanners from "@/components/banners/CategoryBanners";
 import { GetRecentBetting } from "@/actions/user.actions";
 import HeroBanner from "@/components/banners/HeroBanner";
@@ -7,6 +9,11 @@ import RecentBetsTable from "@/components/sections/recentBetsTable";
 import SlotList from "@/components/sections/slotList";
 import { getBannerData } from "@/helpers/banners.helpers";
 import { BannerItem } from "@/types/banner.types";
+
+export const metadata: Metadata = {
+  title: "Home | GoodFriends",
+  description: "Welcome to the GoodFriends Online Casino platform of Vietnam",
+};
 
 export default async function Home() {
   const { data: banners } = await getBannerData("active", 1, 8, "dashbaord");

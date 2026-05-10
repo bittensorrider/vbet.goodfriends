@@ -3,13 +3,15 @@ import { Link } from "@/i18n/navigation";
 import CategoryBannersContainer from "../common/containers/cateogoryBannersContainer";
 // import { BannerItem } from "@/types/banner.types";
 
-export default function CategoryBanners(
+export default function CategoryBanners() {
   // { banners }: { banners: BannerItem }
-) {
   return (
     <CategoryBannersContainer>
       <div className="w-full h-full grid grid-cols-2 gap-2 md:gap-3">
-        <Link href={"#"} className="group relative rounded-2xl md:rounded-3xl overflow-hidden">
+        <Link
+          href={"#"}
+          className="group relative rounded-2xl md:rounded-3xl overflow-hidden"
+        >
           <div
             className="absolute top-0 left-0 w-full h-1/2 z-10 opacity-30"
             style={{
@@ -21,12 +23,15 @@ export default function CategoryBanners(
           </h6>
           <Image
             src={`/imgs/banners/casino.svg`}
+            className="object-cover group-hover:scale-110 transition-all duration-500"
             alt="Casino"
             fill
-            className="object-cover group-hover:scale-110 transition-all duration-500"
           />
         </Link>
-        <Link href={"#"} className="group relative rounded-2xl md:rounded-3xl overflow-hidden">
+        <Link
+          href={"#"}
+          className="group relative rounded-2xl md:rounded-3xl overflow-hidden"
+        >
           <div
             className="absolute top-0 left-0 w-full h-1/2 z-10 opacity-30"
             style={{
@@ -38,9 +43,9 @@ export default function CategoryBanners(
           </h6>
           <Image
             src={`/imgs/banners/slot.svg`}
-            alt="Casino"
-            fill
             className="object-cover group-hover:scale-110 transition-all duration-500"
+            alt="Slot"
+            fill
           />
         </Link>
       </div>
@@ -57,7 +62,7 @@ export default function CategoryBanners(
           </h6>
           <Image
             src={`/imgs/banners/minigame.svg`}
-            alt="Casino"
+            alt="Minigames"
             fill
             className="object-cover group-hover:scale-110 transition-all duration-500"
           />
@@ -74,7 +79,7 @@ export default function CategoryBanners(
           </h6>
           <Image
             src={`/imgs/banners/sport.svg`}
-            alt="Casino"
+            alt="Sport"
             fill
             className="object-cover group-hover:scale-110 transition-all duration-500"
           />
@@ -91,7 +96,7 @@ export default function CategoryBanners(
           </h6>
           <Image
             src={`/imgs/banners/virtual.svg`}
-            alt="Casino"
+            alt="Virtual"
             fill
             className="object-cover group-hover:scale-110 transition-all duration-500"
           />
@@ -108,7 +113,7 @@ export default function CategoryBanners(
           </h6>
           <Image
             src={`/imgs/banners/holdem.svg`}
-            alt="Casino"
+            alt="Hold'em"
             fill
             className="object-cover group-hover:scale-110 transition-all duration-500"
           />

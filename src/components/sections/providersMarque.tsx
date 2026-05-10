@@ -10,87 +10,87 @@ export default function ProvidersMarque() {
       <div className="flex items-center gap-[34px]">
         <Image
           src={`/imgs/provider-footer/footer-image-10.svg`}
-          alt="provider"
-          width={100}
-          height={60}
           className="w-full max-w-[100px] object-contain"
+          width={100}
+          alt="Provider - OG"
+          height={60}
         />
         <Image
           src={`/imgs/provider-footer/footer-image-1.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - Asia Gaming"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-5.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - BigGaming"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-11.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - AllBet"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-2.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - Microgaming"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-12.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - DreamGaming"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-7.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - betrader"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-3.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - Pragmatic Play"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-18.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - Habanero"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-8.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - Ameba"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-4.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - Pocket Games Soft"
         />
         <Image
           src={`/imgs/provider-footer/footer-image-9.svg`}
-          alt="provider"
+          className="w-full max-w-[100px] object-contain"
           width={100}
           height={60}
-          className="w-full max-w-[100px] object-contain"
+          alt="Provider - WM"
         />
       </div>
     </Marquee>

@@ -35,35 +35,39 @@ const SlotListCard = ({
       }}
     >
       <div className="flex flex-col gap-[2px] absolute z-10 bottom-3 sm:bottom-[14px] left-[14px]">
-        <h6 className="text-[11px] md:text-[13px] font-regular text-white">{title_ch}</h6>
-        <h6 className="text-[11px] md:ext-[13px] font-semibold text-white">{title}</h6>
+        <h6 className="text-[11px] md:text-[13px] font-regular text-white">
+          {title_ch}
+        </h6>
+        <h6 className="text-[11px] md:ext-[13px] font-semibold text-white">
+          {title}
+        </h6>
       </div>
       <Image
         src={logo.src}
-        alt={logo.alt}
-        width={100}
-        height={46}
         className={`${cn(
           "absolute top-2 left-2 w-full max-w-[80px] md:max-w-[100px] z-10",
-          logoClassName
+          logoClassName,
         )}`}
+        width={100}
+        height={46}
+        alt={logo.alt}
       />
       <Image
         src={additionalImg.src}
-        alt={additionalImg.alt}
-        width={146}
-        height={132}
         className={`${cn(
           "absolute group-hover:w-[65%] md:group-hover:w-[70%] transition-all duration-400 w-[55%] md:w-[65%] h-auto max-h-[200px] bottom-[0px] right-[-10px]  object-cover",
-          additionalImgClassName
+          additionalImgClassName,
         )}`}
+        width={146}
+        height={132}
+        alt={additionalImg.alt}
       />
     </Link>
   );
 };
 
 export default function SlotList() {
-  const t = useTranslations('slot_list');
+  const t = useTranslations("slot_list");
   return (
     <div className="flex flex-col gap-4 md:gap-10">
       <SectionTitle className="flex items-center gap-2">
@@ -143,7 +147,6 @@ export default function SlotList() {
           title={t("cq9_title")}
           additionalImgClassName="max-w-[58%] group-hover:w-[63%] group-hover:max-w-[63%] right-[10px]"
         />
-
       </CasinoSlotListContainer>
     </div>
   );

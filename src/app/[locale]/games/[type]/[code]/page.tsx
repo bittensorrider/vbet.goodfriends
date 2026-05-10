@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 import PageBreadcrumb from "@/components/common/breadCrumb";
 import GameDetails from "@/components/game-details/GameDetails";
 import { getGameLaunch } from "@/helpers/games.helpers";
@@ -11,18 +13,23 @@ type Props = {
   }>;
 };
 
+export const metadata: Metadata = {
+  title: "Game Details | GoodFriends",
+  description: "Details about the selected game",
+};
+
 export default async function Page({ params }: Props) {
   const { type, code } = await params;
   const user = await getSession();
   let launchData = { url: null, name: null };
   if (user.user) {
     const res = await getGameLaunch(code);
-    if (res.success) launchData = res.data
+    if (res.success) launchData = res.data;
   }
 
   // Translation (SSR)
-  const tCommon = await getTranslations('common');
-  const tTab = await getTranslations('tab_filter');
+  const tCommon = await getTranslations("common");
+  const tTab = await getTranslations("tab_filter");
 
   return (
     <>
@@ -31,11 +38,11 @@ export default async function Page({ params }: Props) {
           data={[
             {
               to: "/",
-              label: tCommon('home'),
+              label: tCommon("home"),
             },
             {
               to: `/games?type=${type}&page=1`,
-              label: type == "live" ? tTab('live') : tTab('slot'),
+              label: type == "live" ? tTab("live") : tTab("slot"),
             },
             {
               label: launchData.name ?? code,

@@ -5,17 +5,14 @@ import { layoutSelectors, LayoutState } from "@/store/layout.store";
 import { FC, useEffect, useState } from "react";
 import AsideNav from "@/components/layout/aside/asideNav";
 import AsideLink from "@/components/layout/aside/asideLink";
-import {
-  ASIDE_MENU,
-  AsideNavType,
-} from "@/constants/asideMenu";
+import { ASIDE_MENU, AsideNavType } from "@/constants/asideMenu";
 import IconBase from "@/components/icon/iconBase";
 import LanguageSwitcher from "@/components/common/languageSwitcher";
 import { ICONS } from "@/constants/icons";
 import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/common/themeSwitcher";
 import { useSearchParams } from "next/navigation";
-import { usePathname, } from "@/i18n/navigation";
+import { usePathname } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 type AsideTogglerProps = Pick<LayoutState, "isAsideOpen" | "toggleAside">;
@@ -41,7 +38,7 @@ export default function Aside() {
   const isAsideOpen = layoutSelectors.use.isAsideOpen();
   const toggleAside = layoutSelectors.use.toggleAside();
   const toggleChat = layoutSelectors.use.toggleChat();
-  const asideT = useTranslations('aside_menu');
+  const asideT = useTranslations("aside_menu");
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -54,17 +51,18 @@ export default function Aside() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const onAction = (action: AsideNavType['action']) => {
+  const onAction = (action: AsideNavType["action"]) => {
     if (action === "chat") {
       toggleChat();
     }
   };
   return (
     <aside
-      className={`${isAsideOpen
-        ? "w-full max-w-full lg:max-w-[240px] border-r-neutral/5"
-        : "max-w-0 lg:max-w-[74px] border-r-transparent lg:border-r-neutral/5"
-        } fixed lg:sticky top-0 flex flex-col py-4 h-full flex-1 shrink-0 border-r linear-background transition-all z-50`}
+      className={`${
+        isAsideOpen
+          ? "w-full max-w-full lg:max-w-[240px] border-r-neutral/5"
+          : "max-w-0 lg:max-w-[74px] border-r-transparent lg:border-r-neutral/5"
+      } fixed lg:sticky top-0 flex flex-col py-4 h-full flex-1 shrink-0 border-r linear-background transition-all z-50`}
     >
       <AsideToggler isAsideOpen={isAsideOpen} toggleAside={toggleAside} />
 
@@ -96,7 +94,7 @@ export default function Aside() {
           >
             <Image
               src={`/imgs/wheel-icon.svg`}
-              alt=""
+              alt="Wheel Icon"
               width={20}
               height={20}
               className="w-full max-w-[20px]"
@@ -117,7 +115,7 @@ export default function Aside() {
           >
             <Image
               src={`/imgs/todolist-icon.svg`}
-              alt=""
+              alt="TODO List Icon"
               width={20}
               height={20}
               className="w-full max-w-[20px]"
@@ -138,8 +136,11 @@ export default function Aside() {
                     nav={navItem}
                     isActive={
                       pathname.startsWith("/games") &&
-                        navItem.identifier &&
-                        navItem.identifier === (searchParams.get("type") == "live" ? "casino" : searchParams.get("type"))
+                      navItem.identifier &&
+                      navItem.identifier ===
+                        (searchParams.get("type") == "live"
+                          ? "casino"
+                          : searchParams.get("type"))
                         ? true
                         : pathname === navItem.href
                           ? true

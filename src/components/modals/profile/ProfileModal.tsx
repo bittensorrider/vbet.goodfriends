@@ -30,12 +30,12 @@ export default function ProfileModal({
   getParam,
   setParam,
 }: Props) {
-  const t = useTranslations('profile_modal');
+  const t = useTranslations("profile_modal");
   const user = userSelectors.use.user();
 
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [activeTab, setActiveTab] = useState<ProfileModalTab>(
-    getParam("tab", "profile")
+    getParam("tab", "profile"),
   );
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -64,13 +64,13 @@ export default function ProfileModal({
   const getTitle = () => {
     switch (activeTab) {
       case "profile":
-        return t('manage_profile_title');
+        return t("manage_profile_title");
       case "vip":
-        return t('manage_profile_title');
+        return t("manage_profile_title");
       case "edit":
-        return t('edit_image_title');
+        return t("edit_image_title");
       default:
-        return t('welcome_title');
+        return t("welcome_title");
     }
   };
 
@@ -167,8 +167,8 @@ export default function ProfileModal({
 // };
 
 const VipTab = () => {
-  const t = useTranslations('vip_tab');
-  
+  const t = useTranslations("vip_tab");
+
   return (
     <>
       <Accordion type="single" collapsible className="gap-4 flex flex-col">
@@ -177,7 +177,7 @@ const VipTab = () => {
           className="!border border-foreground/10 rounded-2xl p-4"
         >
           <AccordionTrigger className="p-0">
-            <h6>{t('vip_benefits')}</h6>
+            <h6>{t("vip_benefits")}</h6>
             <IconBase
               icon={ICONS.CHEVRON_LEFT}
               className="-rotate-90 group-data-[state=open]:!rotate-90 size-5"
@@ -188,34 +188,34 @@ const VipTab = () => {
               <div className="flex items-center gap-1.5">
                 <Image
                   src={`/imgs/medals/bronze.svg`}
-                  alt="bronze"
+                  className="size-5"
                   width={20}
                   height={20}
-                  className="size-5"
+                  alt="Bronze"
                 />
-                <p style={{ color: "#C4A490" }}>{t('bronze')}</p>
-                <span className="text-foreground">({t('level')} 10)</span>
+                <p style={{ color: "#C4A490" }}>{t("bronze")}</p>
+                <span className="text-foreground">({t("level")} 10)</span>
               </div>
               <ul>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('bonus_from_support')}
+                  {t("bonus_from_support")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('rakeback_enabled')}
+                  {t("rakeback_enabled")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('weekly_bonuses')}
+                  {t("weekly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('monthly_bonuses')}
+                  {t("monthly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('vip_telegram_access')}
+                  {t("vip_telegram_access")}
                 </li>
               </ul>
             </div>
@@ -224,34 +224,34 @@ const VipTab = () => {
               <div className="flex items-center gap-1.5">
                 <Image
                   src={`/imgs/medals/silver.svg`}
-                  alt="bronze"
+                  className="size-5"
                   width={20}
                   height={20}
-                  className="size-5"
+                  alt="Silver"
                 />
-                <p style={{ color: "#B2CCCC" }}>{t('silver')}</p>
-                <span className="text-foreground">({t('level')} 11)</span>
+                <p style={{ color: "#B2CCCC" }}>{t("silver")}</p>
+                <span className="text-foreground">({t("level")} 11)</span>
               </div>
               <ul>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('bonus_from_support')}
+                  {t("bonus_from_support")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('rakeback_enabled')}
+                  {t("rakeback_enabled")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('weekly_bonuses')}
+                  {t("weekly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('monthly_bonuses')}
+                  {t("monthly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('vip_telegram_access')}
+                  {t("vip_telegram_access")}
                 </li>
               </ul>
             </div>
@@ -260,34 +260,34 @@ const VipTab = () => {
               <div className="flex items-center gap-1.5">
                 <Image
                   src={`/imgs/medals/gold.svg`}
-                  alt="bronze"
+                  className="size-5"
                   width={20}
                   height={20}
-                  className="size-5"
+                  alt="Gold"
                 />
-                <p style={{ color: "#B2CCCC" }}>{t('gold')}</p>
-                <span className="text-foreground">({t('level')} 12)</span>
+                <p style={{ color: "#B2CCCC" }}>{t("gold")}</p>
+                <span className="text-foreground">({t("level")} 12)</span>
               </div>
               <ul>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('bonus_from_support')}
+                  {t("bonus_from_support")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('rakeback_enabled')}
+                  {t("rakeback_enabled")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('weekly_bonuses')}
+                  {t("weekly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('monthly_bonuses')}
+                  {t("monthly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('vip_telegram_access')}
+                  {t("vip_telegram_access")}
                 </li>
               </ul>
             </div>
@@ -296,34 +296,34 @@ const VipTab = () => {
               <div className="flex items-center gap-1.5">
                 <Image
                   src={`/imgs/medals/platinum-1.svg`}
-                  alt="bronze"
+                  className="size-5"
                   width={20}
                   height={20}
-                  className="size-5"
+                  alt="Platinum"
                 />
-                <p>{t('platinum_1_3')}</p>
-                <span className="text-foreground">({t('level')} 13)</span>
+                <p>{t("platinum_1_3")}</p>
+                <span className="text-foreground">({t("level")} 13)</span>
               </div>
               <ul>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('bonus_from_support')}
+                  {t("bonus_from_support")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('rakeback_enabled')}
+                  {t("rakeback_enabled")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('weekly_bonuses')}
+                  {t("weekly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('monthly_bonuses')}
+                  {t("monthly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('vip_telegram_access')}
+                  {t("vip_telegram_access")}
                 </li>
               </ul>
             </div>
@@ -332,34 +332,34 @@ const VipTab = () => {
               <div className="flex items-center gap-1.5">
                 <Image
                   src={`/imgs/medals/platinum-4.svg`}
-                  alt="bronze"
+                  className="size-5"
                   width={20}
                   height={20}
-                  className="size-5"
+                  alt="Platinum"
                 />
-                <p>{t('platinum_4_6')}</p>
-                <span className="text-foreground">({t('level')} 14)</span>
+                <p>{t("platinum_4_6")}</p>
+                <span className="text-foreground">({t("level")} 14)</span>
               </div>
               <ul>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('bonus_from_support')}
+                  {t("bonus_from_support")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('rakeback_enabled')}
+                  {t("rakeback_enabled")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('weekly_bonuses')}
+                  {t("weekly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('monthly_bonuses')}
+                  {t("monthly_bonuses")}
                 </li>
                 <li className="text-xs font-medium text-foreground/60 flex items-center gap-2 pl-2">
                   <span className="flex w-0.5 h-0.5 bg-foreground/60"></span>
-                  {t('vip_telegram_access')}
+                  {t("vip_telegram_access")}
                 </li>
               </ul>
             </div>
@@ -372,15 +372,13 @@ const VipTab = () => {
         >
           <AccordionTrigger className="p-0 w-full flex flex-col gap-1">
             <div className="flex w-full items-center justify-between">
-              <h6>{t('vip_hosts')}</h6>
+              <h6>{t("vip_hosts")}</h6>
               <IconBase
                 icon={ICONS.CHEVRON_LEFT}
                 className="-rotate-90 group-data-[state=open]:!rotate-90 size-5"
               />
             </div>
-            <p className="text-foreground/60 text-xs">
-              {t('vip_hosts_desc')}
-            </p>
+            <p className="text-foreground/60 text-xs">{t("vip_hosts_desc")}</p>
           </AccordionTrigger>
           <AccordionContent className="p-0 mt-4 flex flex-col gap-3">
             <div className="flex flex-col gap-1">
@@ -391,7 +389,7 @@ const VipTab = () => {
                     className="size-4 text-success/20"
                   />
                   <span className="text-xs font-medium text-foreground/80">
-                    {t('bonus_from_support')}
+                    {t("bonus_from_support")}
                   </span>
                 </li>
                 <li className="flex items-center gap-1">
@@ -400,7 +398,7 @@ const VipTab = () => {
                     className="size-4 text-success/20"
                   />
                   <span className="text-xs font-medium text-foreground/80">
-                    {t('tailored_bonuses')}
+                    {t("tailored_bonuses")}
                   </span>
                 </li>
                 <li className="flex items-center gap-1">
@@ -409,7 +407,7 @@ const VipTab = () => {
                     className="size-4 text-success/20"
                   />
                   <span className="text-xs font-medium text-foreground/80">
-                    {t('gameplay_statistics')}
+                    {t("gameplay_statistics")}
                   </span>
                 </li>
                 <li className="flex items-center gap-1">
@@ -418,7 +416,7 @@ const VipTab = () => {
                     className="size-4 text-success/20"
                   />
                   <span className="text-xs font-medium text-foreground/80">
-                    {t('exclusive_promotions')}
+                    {t("exclusive_promotions")}
                   </span>
                 </li>
               </ul>
